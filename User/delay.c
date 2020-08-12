@@ -8,13 +8,14 @@
   ******************************************************************************
   * @attention
   * This project is for learning only. If it is for commercial use, please contact the author.
+  *
+  * website:developerlab.cn
 	*
-	*Copyright (c) 2020 Lanceli All rights reserved.
+	* Copyright (c) 2020 Lanceli All rights reserved.
   ******************************************************************************
   */
   
 #include "main.h"
-
 
 /**
   * @brief  DelayTimer_Init

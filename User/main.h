@@ -1,27 +1,17 @@
 /**
   ******************************************************************************
-  * @file    Project/STM32F4xx_StdPeriph_Templates/main.h 
-  * @author  MCD Application Team
-  * @version V1.8.0
-  * @date    04-November-2016
-  * @brief   Header for main.c module
+  * @author  Lanceli
+  * @version V1.0.1
+  * @date    09-May-2020
+  * @brief   Project entrance.
+  *          Create the major task.
   ******************************************************************************
   * @attention
+  * This project is for learning only. If it is for commercial use, please contact the author.
   *
-  * <h2><center>&copy; COPYRIGHT 2016 STMicroelectronics</center></h2>
+  * website:developerlab.cn
   *
-  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
-  * You may not use this file except in compliance with the License.
-  * You may obtain a copy of the License at:
-  *
-  *        http://www.st.com/software_license_agreement_liberty_v2
-  *
-  * Unless required by applicable law or agreed to in writing, software 
-  * distributed under the License is distributed on an "AS IS" BASIS, 
-  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  * See the License for the specific language governing permissions and
-  * limitations under the License.
-  *
+  * Copyright (c) 2020 Lanceli All rights reserved.
   ******************************************************************************
   */
   
@@ -97,12 +87,12 @@
 #define PIout(n)   BIT_ADDR(GPIOI_ODR_Addr,n)
 #define PIin(n)    BIT_ADDR(GPIOI_IDR_Addr,n)
 
+/*Redefining RTOS delay function*/
 #define Delay(nCount)	vTaskDelay(nCount)
 
+/*Hardware interupt priority*/
 #define USART1_IRQnPriority								7
 #define DMA2_Stream5_IRQnPriority					8
-#define ETH_IRQnPriority									13
-
 
 /*Debug Message*/
 #define HEAP_DEBUG
@@ -112,5 +102,3 @@
 
 
 #endif /* __MAIN_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

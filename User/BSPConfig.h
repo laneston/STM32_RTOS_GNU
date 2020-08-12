@@ -19,34 +19,35 @@
 extern "C" {
 #endif
 
-#define	MAC_1 0x00
-#define	MAC_2 0x08
-#define	MAC_3 0xdc
-#define	MAC_4 0x25
-#define	MAC_5 0x26
-#define	MAC_6 0x27
+#define	MAC_1       0x00
+#define	MAC_2       0x08
+#define	MAC_3       0xdc
+#define	MAC_4       0x25
+#define	MAC_5       0x26
+#define	MAC_6       0x27
 
-#define LOCALIP_1 192
-#define LOCALIP_2 168
-#define LOCALIP_3 1
-#define LOCALIP_4 150
+#define LOCALIP_1   192
+#define LOCALIP_2   168
+#define LOCALIP_3   1
+#define LOCALIP_4   150
 	
 #define REMOTEIP_1	192
 #define REMOTEIP_2	168
 #define REMOTEIP_3	1
 #define REMOTEIP_4	100
 	
-#define NETMARK_1 255
-#define NETMARK_2 255
-#define NETMARK_3 255
-#define NETMARK_4 0
+#define NETMARK_1   255
+#define NETMARK_2   255
+#define NETMARK_3   255
+#define NETMARK_4   0
 
-#define GATEWAY_1 192
-#define GATEWAY_2 168
-#define GATEWAY_3 1
-#define GATEWAY_4 1
+#define GATEWAY_1   192
+#define GATEWAY_2   168
+#define GATEWAY_3   1
+#define GATEWAY_4   1
 
-#define LOCALPORT 5000
+#define LOCALPORT   5000
+#define REMOTELPORT 5000
 #define REMOTELPORT 5000
 
 typedef enum

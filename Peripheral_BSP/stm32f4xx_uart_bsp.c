@@ -1,15 +1,17 @@
 /**
   ******************************************************************************
   * @author  Lanceli
-  * @version V1.0.0
-  * @date    09-May-2020
-  * @brief   Ethernet low level content initialization
-	*          Enable GPIO, DMA on RMII interface
+  * @version V1.0.1
+  * @date    09-Aug-2020
+  * @brief   USART initialization
+  *          Enable GPIO, DMA interface
   ******************************************************************************
   * @attention
   * This project is for learning only. If it is for commercial use, please contact the author.
-	*
-	*Copyright (c) 2020 Lanceli All rights reserved.
+  *
+  * website: developerlab.cn
+  *
+  * Copyright (c) 2020 Lanceli All rights reserved.
   ******************************************************************************
   */
   
@@ -49,6 +51,11 @@ FILE __stdout;
 void _sys_exit(int x) {	x = x;}
 
 
+/**
+  * @brief  UART Pins initilization
+  * @param  None
+  * @retval None
+  */
 static void USART_Pins(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -66,21 +73,25 @@ static void USART_Pins(void)
 	GPIO_Init(GPIOA,&GPIO_InitStructure);
 }
 
-
+/**
+  * @brief  Interupt initilization
+  * @param  None
+  * @retval None
+  */
 #ifdef	UART_IT
 static void USART_NVIC(void)
 {
 	NVIC_InitTypeDef NVIC_InitStructure;
 	
-#ifdef	UART_IT_RXNE
-	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
-#endif
-#ifdef	UART_IT_IDLE
-	USART_ITConfig(USART1, USART_IT_IDLE, ENABLE);
-#endif	
-#ifdef	UART_IT_TC
-	USART_ITConfig(USART1, USART_IT_TC, ENABLE);
-#endif
+	#ifdef	UART_IT_RXNE
+		USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+	#endif
+	#ifdef	UART_IT_IDLE
+		USART_ITConfig(USART1, USART_IT_IDLE, ENABLE);
+	#endif	
+	#ifdef	UART_IT_TC
+		USART_ITConfig(USART1, USART_IT_TC, ENABLE);
+	#endif
 
 	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=USART1_IRQnPriority;
@@ -89,23 +100,23 @@ static void USART_NVIC(void)
 	NVIC_Init(&NVIC_InitStructure);
 }
 
-#ifdef	UART_DMA_IT
-static void DMA_UART_NVIC(void)
-{
-	NVIC_InitTypeDef NVIC_InitStructure;
+	#ifdef	UART_DMA_IT
+	static void DMA_UART_NVIC(void)
+	{
+		NVIC_InitTypeDef NVIC_InitStructure;
 
-	DMA_ClearITPendingBit(DMA2_Stream5, DMA_IT_TCIF5);
-	DMA_ITConfig(DMA2_Stream5, DMA_IT_TC, ENABLE);
+		DMA_ClearITPendingBit(DMA2_Stream5, DMA_IT_TCIF5);
+		DMA_ITConfig(DMA2_Stream5, DMA_IT_TC, ENABLE);
 
-	NVIC_InitStructure.NVIC_IRQChannel = DMA2_Stream5_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=DMA2_Stream5_IRQnPriority;
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority =0;
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-	NVIC_Init(&NVIC_InitStructure);
-}
-#endif
-
+		NVIC_InitStructure.NVIC_IRQChannel = DMA2_Stream5_IRQn;
+		NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=DMA2_Stream5_IRQnPriority;
+		NVIC_InitStructure.NVIC_IRQChannelSubPriority =0;
+		NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+		NVIC_Init(&NVIC_InitStructure);
+	}
+	#endif
 #endif	
+
 
 /**
   * @brief  Configures the USART Peripheral.
@@ -115,7 +126,7 @@ static void DMA_UART_NVIC(void)
 void USART_Config(u32 boundrate, u16 StopBits, u16 Parity, u16 HardwareFlowControl)
 {		
   USART_InitTypeDef USART_InitStructure;
-	DMA_InitTypeDef  DMA_InitStructure;
+	
   
   /* USARTx configured as follows:
         - BaudRate = 115200 baud  
@@ -125,9 +136,7 @@ void USART_Config(u32 boundrate, u16 StopBits, u16 Parity, u16 HardwareFlowContr
         - Hardware flow control disabled (RTS and CTS signals)
         - Receive and transmit enabled
   */
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1,ENABLE);
-	
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA2, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1,ENABLE);	
 	
   USART_InitStructure.USART_BaudRate = boundrate;
   USART_InitStructure.USART_WordLength = USART_WordLength_8b;
@@ -137,8 +146,22 @@ void USART_Config(u32 boundrate, u16 StopBits, u16 Parity, u16 HardwareFlowContr
   USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
 	USART_Init(USART1, &USART_InitStructure);	
 	
+	USART_Cmd(USART1, ENABLE);
+}
 
-	  /* Configure DMA Initialization Structure */
+
+/**
+  * @brief  Configures the USART Peripheral.
+  * @param  None
+  * @retval None
+  */
+void USART_MDA_Config(void)
+{
+	DMA_InitTypeDef  DMA_InitStructure;
+	
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA2, ENABLE);	
+	
+	/* Configure DMA Initialization Structure */
   DMA_InitStructure.DMA_BufferSize = UART_RX_BUFFER_SIZE;
   DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Disable ;
   DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_1QuarterFull ;
@@ -167,9 +190,8 @@ void USART_Config(u32 boundrate, u16 StopBits, u16 Parity, u16 HardwareFlowContr
   DMA_InitStructure.DMA_Channel = DMA_Channel_4;
   DMA_InitStructure.DMA_DIR = DMA_DIR_MemoryToPeripheral;
   DMA_InitStructure.DMA_Memory0BaseAddr =(uint32_t)TxBuffer;
-  DMA_Init(DMA2_Stream7,&DMA_InitStructure);	
-
-	USART_Cmd(USART1, ENABLE);
+  DMA_Init(DMA2_Stream7,&DMA_InitStructure);
+	
   /* Enable DMA USART RX Stream */
 	DMA_Cmd(DMA2_Stream5,ENABLE);
   /* Enable DMA USART TX Stream */
@@ -178,10 +200,14 @@ void USART_Config(u32 boundrate, u16 StopBits, u16 Parity, u16 HardwareFlowContr
 	USART_DMACmd(USART1, USART_DMAReq_Rx, ENABLE);
 	
 	USART_DMACmd(USART1, USART_DMAReq_Tx, ENABLE);
-
 }
 
 
+/**
+  * @brief  Configures the USART Peripheral.
+  * @param  None
+  * @retval None
+  */
 void UART_Init_115200(void)
 {
 	USART_Pins();
@@ -215,92 +241,100 @@ void UART_Init(u32 boundrate, u16 StopBits, u16 Parity, u16 HardwareFlowControl)
         - Receive and transmit enabled
   */ 
 	USART_Config(boundrate, StopBits, Parity, HardwareFlowControl);
+	USART_MDA_Config();
 #ifdef	UART_IT
 
 	USART_NVIC();	
 
-#ifdef	UART_IT_IDLE
-	if (Semaphore_uart_idle == NULL)
-  {
-		vSemaphoreCreateBinary(Semaphore_uart_idle);
-		xSemaphoreTake( Semaphore_uart_idle, 0);
-	}
-#endif
-#ifdef	UART_IT_TC
-	if (Semaphore_uart_tc == NULL)
-  {
-		vSemaphoreCreateBinary(Semaphore_uart_tc);
-		xSemaphoreTake( Semaphore_uart_tc, 0);
-	}
-#endif
-#endif
-#ifdef	UART_DMA_IT
-	DMA_UART_NVIC();
-	if (Semaphore_uart_dma == NULL)
-  {
-		vSemaphoreCreateBinary(Semaphore_uart_dma);
-		xSemaphoreTake( Semaphore_uart_dma, 0);
-	}
+	#ifdef	UART_IT_IDLE
+		if (Semaphore_uart_idle == NULL)
+		{
+			vSemaphoreCreateBinary(Semaphore_uart_idle);
+			xSemaphoreTake( Semaphore_uart_idle, 0);
+		}
+	#endif
+		
+	#ifdef	UART_IT_TC
+		if (Semaphore_uart_tc == NULL)
+		{
+			vSemaphoreCreateBinary(Semaphore_uart_tc);
+			xSemaphoreTake( Semaphore_uart_tc, 0);
+		}
+	#endif
+		
+	#ifdef	UART_DMA_IT
+		DMA_UART_NVIC();
+		if (Semaphore_uart_dma == NULL)
+		{
+			vSemaphoreCreateBinary(Semaphore_uart_dma);
+			xSemaphoreTake( Semaphore_uart_dma, 0);
+		}
+	#endif
+		
 #endif
 }
 
 #ifdef	UART_IT
-#ifdef	UART_IT_RXNE
-void UartRecv_RXNE_IRQ(void)
-{
-	RxdBufferStructure.uartRecv_Counter++;
-}
-#endif
-#ifdef	UART_IT_IDLE
-void UartRecv_IDLE_IRQ(void)
-{
-  portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
 
-	/* Give the semaphore to wakeup LwIP task */
-	xSemaphoreGiveFromISR( Semaphore_uart_idle, &xHigherPriorityTaskWoken );
+	#ifdef	UART_IT_RXNE
+	void UartRecv_RXNE_IRQ(void)
+	{
+		RxdBufferStructure.uartRecv_Counter++;
+	}
+	#endif
+
+	#ifdef	UART_IT_IDLE
+	void UartRecv_IDLE_IRQ(void)
+	{
+		portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
+
+		/* Give the semaphore to wakeup LwIP task */
+		xSemaphoreGiveFromISR( Semaphore_uart_idle, &xHigherPriorityTaskWoken );
+		
+		/* Switch tasks if necessary. */
+		if( xHigherPriorityTaskWoken != pdFALSE )
+		{
+			portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
+		}
+	}
+	#endif
 	
-  /* Switch tasks if necessary. */
-  if( xHigherPriorityTaskWoken != pdFALSE )
-  {
-    portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
-  }
-}
-#endif
-#ifdef	UART_IT_TC
-void UartTransmit_IRQ(void)
-{
-  portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
+	#ifdef	UART_IT_TC
+	void UartTransmit_IRQ(void)
+	{
+		portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
 
-	/* Give the semaphore to wakeup LwIP task */
-	xSemaphoreGiveFromISR( Semaphore_uart_tc, &xHigherPriorityTaskWoken );
+		/* Give the semaphore to wakeup LwIP task */
+		xSemaphoreGiveFromISR( Semaphore_uart_tc, &xHigherPriorityTaskWoken );
+		
+		/* Switch tasks if necessary. */
+		if( xHigherPriorityTaskWoken != pdFALSE )
+		{
+			portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
+		}
+	}
+	#endif
+
+	#ifdef UART_DMA_IT
+	void DmaComplete_IRQ(void)
+	{
+		portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
+		RxdBufferStructure.dmaReversalValue = !RxdBufferStructure.dmaReversalValue;
+		RxdBufferStructure.dmaCompleteCounter = RxdBufferStructure.uartRecv_Counter;
+
+		/* Give the semaphore to wakeup LwIP task */
+		xSemaphoreGiveFromISR( Semaphore_uart_dma, &xHigherPriorityTaskWoken );
+		
+		/* Switch tasks if necessary. */
+		if( xHigherPriorityTaskWoken != pdFALSE )
+		{
+			portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
+		}
+	}
+	#endif
 	
-  /* Switch tasks if necessary. */
-  if( xHigherPriorityTaskWoken != pdFALSE )
-  {
-    portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
-  }
-}
 #endif
 
-#ifdef UART_DMA_IT
-
-void DmaComplete_IRQ(void)
-{
-  portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
-	RxdBufferStructure.dmaReversalValue = !RxdBufferStructure.dmaReversalValue;
-	RxdBufferStructure.dmaCompleteCounter = RxdBufferStructure.uartRecv_Counter;
-
-	/* Give the semaphore to wakeup LwIP task */
-	xSemaphoreGiveFromISR( Semaphore_uart_dma, &xHigherPriorityTaskWoken );
-	
-  /* Switch tasks if necessary. */
-  if( xHigherPriorityTaskWoken != pdFALSE )
-  {
-    portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
-  }
-}
-#endif
-#endif
 
 /**
   * @brief  Retargets the C library printf function to the USART.

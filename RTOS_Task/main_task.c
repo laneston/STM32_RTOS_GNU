@@ -21,13 +21,14 @@ EmbeverConfig_TypeDef EmbeverStruct;
 
 
 /**
-  * @brief  Memory initialization, Peripheral parameter configuration.
+  * @brief  Peripheral parameter initialization.
   * @param  None
   * @retval None
   */
 static void Device_Init(void)
 {
-	UartParam_Config();
+	/*Initialization of serial port parameters*/
+	UartParam_Init();
 }
 
 
@@ -40,17 +41,25 @@ void Main_Task(void)
 {
 //	BaseType_t xReturn = pdPASS;
 	
+	/*Delay timer initialization*/
 	DelayTimer_Init(TIM2_Period);
 	
+	/*Memory heap initialization*/
 	stSramInit(&HeapStruct_SRAM1, STM32F4XX_SRAM1_START, STM32F4XX_SRAM1_SIZE);
 	
+	/*Peripheral parameters initialization.*/
 	Device_Init();
 	
+	/*UART receive memory initialization. This function is required if receive is enabled*/
 	UartRxBufferPointer_Init();
 	
+	/*UART initialization*/
 	UART_Init(EmbeverStruct.uartdev.BaudRate, EmbeverStruct.uartdev.StopBits, EmbeverStruct.uartdev.Parity, EmbeverStruct.uartdev.HardwareFlowControl);
 	
-	taskENTER_CRITICAL();
+	
+	
+	
+	taskENTER_CRITICAL();	
 	
 //	xReturn = xTaskCreate((TaskFunction_t)SramTesting_Task,
 //						(const char*)"SramTesting_Task",
@@ -62,6 +71,8 @@ void Main_Task(void)
 //	else{}
   
 	taskEXIT_CRITICAL();
+	
+	
 	vTaskDelete(Main_Task_Handle);
   for( ;; ){}
 }

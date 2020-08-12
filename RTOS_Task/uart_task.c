@@ -1,15 +1,17 @@
 /**
   ******************************************************************************
   * @author  Lanceli
-  * @version V1.0.1
+  * @version V1.0.0
   * @date    09-May-2020
-  * @brief   Serial Task operation
-	*          
+  * @brief   Ethernet low level content initialization
+	*          Enable GPIO, DMA on RMII interface
   ******************************************************************************
   * @attention
   * This project is for learning only. If it is for commercial use, please contact the author.
 	*
-	*Copyright (c) 2020 Lanceli All rights reserved.
+	* website: developerlab.cn
+	*
+	* Copyright (c) 2020 Lanceli All rights reserved.
   ******************************************************************************
   */
 #include <string.h>
@@ -25,19 +27,12 @@ UARTBufferTypeDef	RxdBufferStructure;
 
 TaskHandle_t UART1_Receive_Task_Handle;
 
-void UartParam_Config(void)
-{
-	RxBuffer0 = stSramMalloc(&HeapStruct_SRAM1, UART_RX_BUFFER_SIZE);
-	RxBuffer1 = stSramMalloc(&HeapStruct_SRAM1, UART_RX_BUFFER_SIZE);
-	
-	TxBuffer = stSramMalloc(&HeapStruct_SRAM1, UART_RX_BUFFER_SIZE);
-	
-	EmbeverStruct.uartdev.BaudRate = UART_BAUDRATE;
-	EmbeverStruct.uartdev.StopBits = UART_STOPBITS;
-	EmbeverStruct.uartdev.Parity = UART_PARITY;
-	EmbeverStruct.uartdev.HardwareFlowControl = UART_FLOWCONTROL;
-}
 
+/**
+  * @brief  UART1_Receive_Task
+  * @param  None
+  * @retval None
+  */
 void UART1_Receive_Task(void)
 {
 	static u16 UARTWirteResidualLength = 0;
@@ -98,11 +93,32 @@ void UART1_Receive_Task(void)
 	}
 }
 
-/*uart sending function
-* sending buffer
-* sending length
-*/
 
+/**
+  * @brief  UartParam_Config
+  * @param  None
+  * @retval None
+  */
+void UartParam_Init(void)
+{
+	RxBuffer0 = stSramMalloc(&HeapStruct_SRAM1, UART_RX_BUFFER_SIZE);
+	RxBuffer1 = stSramMalloc(&HeapStruct_SRAM1, UART_RX_BUFFER_SIZE);
+	
+	TxBuffer = stSramMalloc(&HeapStruct_SRAM1, UART_RX_BUFFER_SIZE);
+	
+	EmbeverStruct.uartdev.BaudRate = UART_BAUDRATE;
+	EmbeverStruct.uartdev.StopBits = UART_STOPBITS;
+	EmbeverStruct.uartdev.Parity = UART_PARITY;
+	EmbeverStruct.uartdev.HardwareFlowControl = UART_FLOWCONTROL;
+}
+
+
+/**
+  * @brief  uart sending function
+	* @param  buffer: sending buffer
+	* @param  length: sending length
+  * @retva  none
+  */
 void UartDmaStreamSend(u8 *buffer, u16 length)
 {
 	DMA_ClearFlag(DMA2_Stream7, DMA_FLAG_TCIF7);
@@ -114,11 +130,14 @@ void UartDmaStreamSend(u8 *buffer, u16 length)
 	DMA_Cmd(DMA2_Stream7,ENABLE);
 }
 
+
+/**
+  * @brief  uart rx buffer pointer buffer init
+  * @param  None
+  * @retval None
+  */
 void UartRxBufferPointer_Init(void)
 {	
-//	uartToEtherRxBuffer_HeadP = pvPortMalloc(UART_ETHER_BUFFER_SIZE);
-//	if(uartToEtherRxBuffer_HeadP == NULL){}
-	
 	uartToEtherRxBuffer_HeadP = stSramMalloc(&HeapStruct_SRAM1, UART_ETHER_BUFFER_SIZE);
 	if(uartToEtherRxBuffer_HeadP == NULL){}
 		
@@ -217,7 +236,8 @@ u8 WirteToUartRxBufferFromRxBuffer0(UARTBufferTypeDef *p, u16 length)
 /***********************Extract data from memory heap***************************
 @param	p:			UartToEtherBufferTypeDef
 @param	length:	UartToEtherBufferTypeDef.uartRecv_Counter
-reuturn SET:success
+
+reuturn SET:  success
 				RESET:The buffer is full,or data length is fault.
 */
 u8 WirteToUartRxBufferFromRxBuffer1(UARTBufferTypeDef *p, u16 length)

@@ -1,14 +1,19 @@
- /** 
-	* @version V1.0.0
-  * @date    01-Jue-2020
-  * @brief   Heap allocations
-	*	@note    This memory allocation method is only suitable for single SRAM¡£
-	*					 	The whole SRAM cannot be shared with other stacks
+/**
+  ******************************************************************************
+  * @author  Lanceli
+  * @version V1.0.1
+  * @date    09-Aug-2020
+  * @brief   on-and off-chip memory allocation
+  *          How to use it.
+  *          1. initializate memory space.[void stSramInit(Heap_TypeDef *p, u32 headAddr, u32 heapSize)]
+  *          2. Allocate memory.[void *stSramMalloc(Heap_TypeDef *p, u32 xWantedSize )]
   ******************************************************************************
   * @attention
   * This project is for learning only. If it is for commercial use, please contact the author.
-	*
-	* Copyright (c) 2020 Lanceli All rights reserved.
+  *
+  * website: developerlab.cn
+  *
+  * Copyright (c) 2020 Lanceli All rights reserved.
   ******************************************************************************
   */
 #include "main.h"

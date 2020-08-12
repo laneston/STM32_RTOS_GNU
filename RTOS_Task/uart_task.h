@@ -60,7 +60,7 @@ typedef struct
 extern TaskHandle_t UART1_Receive_Task_Handle;
 extern UARTBufferTypeDef	RxdBufferStructure;
 
-extern void UartParam_Config(void);
+extern void UartParam_Init(void);
 extern void UART1_Receive_Task(void);
 extern void UartRxBufferPointer_Init(void);
 extern u8 WirteToUartRxBufferFromRxBuffer0(UARTBufferTypeDef *p, u16 length);
