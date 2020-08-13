@@ -29,6 +29,7 @@
 
 #include "main_task.h"
 #include "uart_task.h"
+#include "dht22_task.h"
 
 #include "stm32f4xx.h"
 #include "stm32f4xx_uart_bsp.h"
@@ -97,7 +98,7 @@
 
 /*Debug Message*/
 #define HEAP_DEBUG
-#define NAND_DEBUG
+#define HUMI_DEBUG
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
 

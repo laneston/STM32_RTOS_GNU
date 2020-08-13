@@ -558,6 +558,11 @@
               <FileType>1</FileType>
               <FilePath>..\RTOS_Task\uart_task.c</FilePath>
             </File>
+            <File>
+              <FileName>dht22_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RTOS_Task\dht22_task.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

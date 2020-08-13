@@ -41,7 +41,7 @@ static void Device_Init(void)
   */
 void Main_Task(void)
 {
-//	BaseType_t xReturn = pdPASS;
+	BaseType_t xReturn = pdPASS;
 	
 	/*Delay timer initialization*/
 	DelayTimer_Init(TIM2_Period);
@@ -63,14 +63,16 @@ void Main_Task(void)
 	
 	taskENTER_CRITICAL();	
 	
-//	xReturn = xTaskCreate((TaskFunction_t)SramTesting_Task,
-//						(const char*)"SramTesting_Task",
-//						(uint32_t)SramTesting_Task_SIZE,
-//						(void*)NULL,
-//						(UBaseType_t)SramTesting_Task_PRIORITY,
-//						(TaskHandle_t*)&SramTesting_Task_Handle);
-//	if(pdPASS == xReturn){}
-//	else{}
+	xReturn = xTaskCreate((TaskFunction_t)DHT22_Task,
+						(const char*)"DHT22_Task",
+						(uint32_t)DHT22_Task_STACK_SIZE,
+						(void*)NULL,
+						(UBaseType_t)DHT22_Task_PRIORITY,
+						(TaskHandle_t*)&DHT22_Task_Handle);
+	if(pdPASS == xReturn){}
+	else{
+		printf("DHT22_Task ERROR\r\n");
+	}
   
 	taskEXIT_CRITICAL();
 	

@@ -32,6 +32,11 @@ extern "C" {
 #define GPIO_DHT22_OUT        PCout(10)
 #define GPIO_DHT22_IN         PCin(10)
 
+
+
+
+extern u8 DHT22_GetOneFrame(u8 *result);
+
 #ifdef __cplusplus
 }
 #endif
