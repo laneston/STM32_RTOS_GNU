@@ -1,0 +1,869 @@
+Dependencies for Project 'STM32_RTOS_GUN', Target 'STM32F4xx': (DO NOT MODIFY !)
+F (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\system_stm32f4xx.o --omf_browse ..\output\system_stm32f4xx.crf --depend ..\output\system_stm32f4xx.d)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+F (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f40_41xxx.s)(0x5F34C1D8)(--cpu Cortex-M4.fp -g --apcs=interwork -I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"--pd "__UVISION_VERSION SETA 514" --pd "STM32F407xx SETA 1"--list .\listings\startup_stm32f40_41xxx.lst --xref -o ..\output\startup_stm32f40_41xxx.o --depend ..\output\startup_stm32f40_41xxx.d)
+F (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\src\misc.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\misc.o --omf_browse ..\output\misc.crf --depend ..\output\misc.d)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+F (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\stm32f4xx_dma.o --omf_browse ..\output\stm32f4xx_dma.crf --depend ..\output\stm32f4xx_dma.d)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+F (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\stm32f4xx_gpio.o --omf_browse ..\output\stm32f4xx_gpio.crf --depend ..\output\stm32f4xx_gpio.d)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+F (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\stm32f4xx_rcc.o --omf_browse ..\output\stm32f4xx_rcc.crf --depend ..\output\stm32f4xx_rcc.d)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+F (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\stm32f4xx_syscfg.o --omf_browse ..\output\stm32f4xx_syscfg.crf --depend ..\output\stm32f4xx_syscfg.d)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+F (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\stm32f4xx_tim.o --omf_browse ..\output\stm32f4xx_tim.crf --depend ..\output\stm32f4xx_tim.d)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+F (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\stm32f4xx_usart.o --omf_browse ..\output\stm32f4xx_usart.crf --depend ..\output\stm32f4xx_usart.d)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+F (..\FreeRTOSv10.3.1\croutine.c)(0x5F34C1D7)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\croutine.o --omf_browse ..\output\croutine.crf --depend ..\output\croutine.d)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\croutine.h)(0x5F34C1D7)
+F (..\FreeRTOSv10.3.1\event_groups.c)(0x5F34C1D7)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\event_groups.o --omf_browse ..\output\event_groups.crf --depend ..\output\event_groups.d)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\timers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\event_groups.h)(0x5F34C1D7)
+F (..\FreeRTOSv10.3.1\list.c)(0x5F34C1D7)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\list.o --omf_browse ..\output\list.crf --depend ..\output\list.d)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+F (..\FreeRTOSv10.3.1\queue.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\queue.o --omf_browse ..\output\queue.crf --depend ..\output\queue.d)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\queue.h)(0x5F34C1D7)
+F (..\FreeRTOSv10.3.1\stream_buffer.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\stream_buffer.o --omf_browse ..\output\stream_buffer.crf --depend ..\output\stream_buffer.d)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\stream_buffer.h)(0x5F34C1D7)
+F (..\FreeRTOSv10.3.1\tasks.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\tasks.o --omf_browse ..\output\tasks.crf --depend ..\output\tasks.d)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\timers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\stack_macros.h)(0x5F34C1D7)
+F (..\FreeRTOSv10.3.1\timers.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\timers.o --omf_browse ..\output\timers.crf --depend ..\output\timers.d)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\queue.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\timers.h)(0x5F34C1D7)
+F (..\FreeRTOSv10.3.1\portable\MemMang\heap_4.c)(0x5F34C1D7)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\heap_4.o --omf_browse ..\output\heap_4.crf --depend ..\output\heap_4.d)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+F (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\port.c)(0x5F34C1D7)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\port.o --omf_browse ..\output\port.crf --depend ..\output\port.d)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+F (..\User\delay.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\delay.o --omf_browse ..\output\delay.crf --depend ..\output\delay.d)
+I (..\User\main.h)(0x5F35061E)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\timers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\semphr.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\queue.h)(0x5F34C1D7)
+I (..\User\delay.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+I (..\User\BSPConfig.h)(0x5F34C1D8)
+I (..\RTOS_Task\main_task.h)(0x5F34C1D8)
+I (..\RTOS_Task\uart_task.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_uart_bsp.h)(0x5F350515)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Peripheral_BSP\stm32f4xx_heap_bsp.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_dht22_bsp.h)(0x5F350653)
+F (..\User\main.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
+I (..\User\main.h)(0x5F35061E)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\timers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\semphr.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\queue.h)(0x5F34C1D7)
+I (..\User\delay.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+I (..\User\BSPConfig.h)(0x5F34C1D8)
+I (..\RTOS_Task\main_task.h)(0x5F34C1D8)
+I (..\RTOS_Task\uart_task.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_uart_bsp.h)(0x5F350515)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Peripheral_BSP\stm32f4xx_heap_bsp.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_dht22_bsp.h)(0x5F350653)
+F (..\User\stm32f4xx_it.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\stm32f4xx_it.o --omf_browse ..\output\stm32f4xx_it.crf --depend ..\output\stm32f4xx_it.d)
+I (..\User\stm32f4xx_it.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+I (..\User\main.h)(0x5F35061E)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\timers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\semphr.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\queue.h)(0x5F34C1D7)
+I (..\User\delay.h)(0x5F34C1D8)
+I (..\User\BSPConfig.h)(0x5F34C1D8)
+I (..\RTOS_Task\main_task.h)(0x5F34C1D8)
+I (..\RTOS_Task\uart_task.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_uart_bsp.h)(0x5F350515)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Peripheral_BSP\stm32f4xx_heap_bsp.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_dht22_bsp.h)(0x5F350653)
+F (..\User\FreeRTOSConfig.h)(0x5F34C1D8)()
+F (..\User\BSPConfig.h)(0x5F34C1D8)()
+F (..\User\main.h)(0x5F35061E)()
+F (..\RTOS_Task\main_task.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\main_task.o --omf_browse ..\output\main_task.crf --depend ..\output\main_task.d)
+I (..\User\main.h)(0x5F35061E)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\timers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\semphr.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\queue.h)(0x5F34C1D7)
+I (..\User\delay.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+I (..\User\BSPConfig.h)(0x5F34C1D8)
+I (..\RTOS_Task\main_task.h)(0x5F34C1D8)
+I (..\RTOS_Task\uart_task.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_uart_bsp.h)(0x5F350515)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Peripheral_BSP\stm32f4xx_heap_bsp.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_dht22_bsp.h)(0x5F350653)
+F (..\RTOS_Task\uart_task.c)(0x5F34C1D8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\uart_task.o --omf_browse ..\output\uart_task.crf --depend ..\output\uart_task.d)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
+I (..\User\main.h)(0x5F35061E)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\timers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\semphr.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\queue.h)(0x5F34C1D7)
+I (..\User\delay.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+I (..\User\BSPConfig.h)(0x5F34C1D8)
+I (..\RTOS_Task\main_task.h)(0x5F34C1D8)
+I (..\RTOS_Task\uart_task.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_uart_bsp.h)(0x5F350515)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Peripheral_BSP\stm32f4xx_heap_bsp.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_dht22_bsp.h)(0x5F350653)
+F (..\Peripheral_BSP\stm32f4xx_heap_bsp.c)(0x5F35066D)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\stm32f4xx_heap_bsp.o --omf_browse ..\output\stm32f4xx_heap_bsp.crf --depend ..\output\stm32f4xx_heap_bsp.d)
+I (..\User\main.h)(0x5F35061E)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\timers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\semphr.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\queue.h)(0x5F34C1D7)
+I (..\User\delay.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+I (..\User\BSPConfig.h)(0x5F34C1D8)
+I (..\RTOS_Task\main_task.h)(0x5F34C1D8)
+I (..\RTOS_Task\uart_task.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_uart_bsp.h)(0x5F350515)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Peripheral_BSP\stm32f4xx_heap_bsp.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_dht22_bsp.h)(0x5F350653)
+F (..\Peripheral_BSP\stm32f4xx_uart_bsp.c)(0x5F35067F)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\stm32f4xx_uart_bsp.o --omf_browse ..\output\stm32f4xx_uart_bsp.crf --depend ..\output\stm32f4xx_uart_bsp.d)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
+I (..\User\main.h)(0x5F35061E)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\timers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\semphr.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\queue.h)(0x5F34C1D7)
+I (..\User\delay.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+I (..\User\BSPConfig.h)(0x5F34C1D8)
+I (..\RTOS_Task\main_task.h)(0x5F34C1D8)
+I (..\RTOS_Task\uart_task.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_uart_bsp.h)(0x5F350515)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Peripheral_BSP\stm32f4xx_heap_bsp.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_dht22_bsp.h)(0x5F350653)
+F (..\Peripheral_BSP\stm32f4xx_dht22_bsp.c)(0x5F3506FB)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include -I..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc -I..\FreeRTOSv10.3.1\include -I..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F -I..\Peripheral_BSP -I..\RTOS_Task -I..\User-I C:\Users\Lance\Documents\GitHub\STM32_RTOS_GUN\MDK\RTE-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0"-I "D:\Program Files\Keil_v5\ARM\CMSIS\Include"-I "D:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\output\stm32f4xx_dht22_bsp.o --omf_browse ..\output\stm32f4xx_dht22_bsp.crf --depend ..\output\stm32f4xx_dht22_bsp.d)
+I (..\User\main.h)(0x5F35061E)
+I (..\FreeRTOSv10.3.1\include\FreeRTOS.h)(0x5F34C1D7)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5475F300)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EA50E90)
+I (..\User\FreeRTOSConfig.h)(0x5F34C1D8)
+I (..\FreeRTOSv10.3.1\include\projdefs.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\portable.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\deprecated_definitions.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\portable\RVDS\ARM_CM4F\portmacro.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\mpu_wrappers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\timers.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\task.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\list.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\semphr.h)(0x5F34C1D7)
+I (..\FreeRTOSv10.3.1\include\queue.h)(0x5F34C1D7)
+I (..\User\delay.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cm4.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmInstr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmFunc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Include\core_cmSimd.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F34C1D8)
+I (..\User\stm32f4xx_conf.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5F34C1D8)
+I (..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5F34C1D8)
+I (..\User\BSPConfig.h)(0x5F34C1D8)
+I (..\RTOS_Task\main_task.h)(0x5F34C1D8)
+I (..\RTOS_Task\uart_task.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_uart_bsp.h)(0x5F350515)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Peripheral_BSP\stm32f4xx_heap_bsp.h)(0x5F34C1D8)
+I (..\Peripheral_BSP\stm32f4xx_dht22_bsp.h)(0x5F350653)
