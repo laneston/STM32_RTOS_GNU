@@ -17,8 +17,6 @@
 
 TaskHandle_t DHT22_Task_Handle;
 
-
-
 /**
   * @brief  DHT22_Task
   * @param  None
