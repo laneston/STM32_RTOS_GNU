@@ -52,22 +52,25 @@ static u8 DHT22_Start(void)
 	DHT22_OUT();
 	
 	GPIO_DHT22_OUT = RESET;
-	Delay_us(550);
+	Delay_us(600);
 	GPIO_DHT22_OUT = SET;
 	Delay_us(30);
 	
+	/*change to input mode*/
   DHT22_IN();
 	
+	/*waiting for low level*/
 	count = 100;
-	while(!GPIO_DHT22_IN)
+	while((GPIO_DHT22_IN)&&count)
 	{
 		count--;
 		Delay_us(1);
 	}
 	if(!count) return RESET;
 	
+	/*waiting for high level*/
 	count = 100;
-	while(GPIO_DHT22_IN)
+	while((!GPIO_DHT22_IN)&&count)
 	{
 		count--;
 		Delay_us(1);
@@ -89,14 +92,13 @@ static u8 DTH22_GetOnebit(void)
 	u8 revale = 0;
 	u8 count;
 	
-	count = 100;
-	/*wait for high level*/
-	while((!GPIO_DHT22_IN) && count)
+	/*waiting for high level*/
+	while((!GPIO_DHT22_IN))
 	{
-		count--;
 		Delay_us(1);
 	}
 	
+	/*Calculate the period of level lowering*/
 	count = 40;
 	while(GPIO_DHT22_IN && count)
 	{
@@ -104,7 +106,9 @@ static u8 DTH22_GetOnebit(void)
 		Delay_us(1);
 	}
 	
+	/*return 0 if period less than 40us*/
 	if(count) revale = 0;
+	/*return 1 if period more than 40us*/
 	else revale = 1;
 	
 	return revale;
@@ -125,6 +129,8 @@ static u8 DHT22_GetOneByte(void)
 	{
 		data <<= 1;
 		data |= DTH22_GetOnebit();
+		/*waiting for low level*/
+		while(GPIO_DHT22_IN);
 	}
 	return data;
 }
@@ -140,14 +146,29 @@ u8 DHT22_GetOneFrame(u8 *result)
 	u8 revale;
 	u8 i;
 	u8 data[5];
+	u8 count;
 	
 	if(DHT22_Start())
 	{
-		
+		/*if start successful, waiting fir low level*/
+		count = 100;
+		while((GPIO_DHT22_IN)&&count)
+		{
+			count--;
+			Delay_us(1);
+		}
+		if(!count) 
+		{
+			DHT22_OUT();
+			GPIO_DHT22_OUT = SET;
+			return RESET;
+		}
 	}
 	else
 	{
-		return 0xff;
+		DHT22_OUT();
+		GPIO_DHT22_OUT = SET;
+		return RESET;
 	}
 	
 	for(i=0; i<5; i++)
@@ -155,8 +176,16 @@ u8 DHT22_GetOneFrame(u8 *result)
 		data[i] = DHT22_GetOneByte();
 	}
 	
+	#ifdef HUMI_DEBUG
+	printf("raw data:%d, %d, %d, %d, %d\r\n", data[0],data[1],data[2],data[3],data[4]);
+	#endif
+
 	/*Data check*/
 	revale = data[0] + data[1] + data[2] + data[3];
+	
+	#ifdef HUMI_DEBUG
+	printf("checksums£º%d\r\n",revale);
+	#endif
 	
 	if(revale == data[4])
 	{
@@ -170,6 +199,8 @@ u8 DHT22_GetOneFrame(u8 *result)
 	else
 	{
 		revale = RESET;
+		DHT22_OUT();
+		GPIO_DHT22_OUT = SET;
 	}
 	
 	return revale;

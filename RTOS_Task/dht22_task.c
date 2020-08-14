@@ -45,6 +45,6 @@ void DHT22_Task(void)
 			printf("Temp-Humi GET ERROR\r\n");
 			#endif
 		}
-		Delay(1000);
+		Delay(3000);
 	}
 }

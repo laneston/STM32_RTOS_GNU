@@ -58,8 +58,7 @@ void Main_Task(void)
 	/*UART initialization*/
 	UART_Init(EmbeverStruct.uartdev.BaudRate, EmbeverStruct.uartdev.StopBits, EmbeverStruct.uartdev.Parity, EmbeverStruct.uartdev.HardwareFlowControl);
 	
-	
-	
+	DHT22_Init();
 	
 	taskENTER_CRITICAL();	
 	

@@ -20,8 +20,10 @@ extern "C" {
 
 #include "stm32f4xx.h"
 	
-#define DHT22_IN()  {GPIOC->MODER&=~(3<<(10*2));GPIOC->MODER|=0<<10*2; GPIOC->OTYPER |= 1<<10;}
-#define DHT22_OUT() {GPIOC->MODER&=~(3<<(10*2));GPIOC->MODER|=1<<10*2; GPIOC->OTYPER |= 0<<10;}
+
+#define DHT22_IN()  {GPIOC->MODER &= ~(3<<(10*2)); GPIOC->MODER |= 0<<10*2; GPIOC->OTYPER |= 1<<10;}
+#define DHT22_OUT() {GPIOC->MODER &= ~(3<<(10*2)); GPIOC->MODER |= 1<<10*2; GPIOC->OTYPER |= 1<<10;}
+
 
 
 /**set the PC10 as the data BUS**/
@@ -34,7 +36,7 @@ extern "C" {
 
 
 
-
+extern void DHT22_Init(void);
 extern u8 DHT22_GetOneFrame(u8 *result);
 
 #ifdef __cplusplus
