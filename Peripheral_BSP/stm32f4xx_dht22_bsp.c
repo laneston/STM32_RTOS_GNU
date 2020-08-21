@@ -13,8 +13,7 @@
   *
   * Copyright (c) 2020 Lanceli All rights reserved.
   ******************************************************************************
-  */
- 
+  */ 
 #include "main.h"
 
 
@@ -52,7 +51,7 @@ static u8 DHT22_Start(void)
 	DHT22_OUT();
 	
 	GPIO_DHT22_OUT = RESET;
-	Delay_us(600);
+	Delay_us(550);
 	GPIO_DHT22_OUT = SET;
 	Delay_us(30);
 	

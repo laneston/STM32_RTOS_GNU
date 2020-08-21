@@ -1,16 +1,19 @@
 /**
-  * @version V1.0.0
-  * @date    09-May-2020
-  * @brief   DHT22 drive
-  *
+  ******************************************************************************
+  * @author  Lanceli
+  * @version V1.0.1
+  * @date    09-Aug-2020
+  * @brief   DHT22 Drive
+  *          GPIO initialization
   ******************************************************************************
   * @attention
   * This project is for learning only. If it is for commercial use, please contact the author.
-	*
-	* Copyright (c) 2020 Lanceli All rights reserved.
+  *
+  * website: developerlab.cn
+  *
+  * Copyright (c) 2020 Lanceli All rights reserved.
   ******************************************************************************
   */
-  
 #ifndef __STM32F4XX_DHT22_BSP_H
 #define __STM32F4XX_DHT22_BSP_H
 
@@ -22,7 +25,7 @@ extern "C" {
 	
 
 #define DHT22_IN()  {GPIOC->MODER &= ~(3<<(10*2)); GPIOC->MODER |= 0<<10*2; GPIOC->OTYPER |= 1<<10;}
-#define DHT22_OUT() {GPIOC->MODER &= ~(3<<(10*2)); GPIOC->MODER |= 1<<10*2; GPIOC->OTYPER |= 1<<10;}
+#define DHT22_OUT() {GPIOC->MODER &= ~(3<<(10*2)); GPIOC->MODER |= 1<<10*2; GPIOC->OTYPER |= 0<<10;}
 
 
 
