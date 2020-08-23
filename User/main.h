@@ -28,7 +28,6 @@
 #include "BSPConfig.h"
 
 #include "main_task.h"
-#include "uart_task.h"
 #include "dht22_task.h"
 
 #include "stm32f4xx.h"
@@ -97,6 +96,7 @@
 #define DMA2_Stream5_IRQnPriority					8
 
 /*Debug Message*/
+#define USE_FULL_ASSERT
 #define HEAP_DEBUG
 #define HUMI_DEBUG
 /* Exported macro ------------------------------------------------------------*/

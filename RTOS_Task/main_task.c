@@ -30,7 +30,11 @@ EmbeverConfig_TypeDef EmbeverStruct;
 static void Device_Init(void)
 {
 	/*Initialization of serial port parameters*/
-	UartParam_Init();
+	EmbeverStruct.uartdev.BaudRate = UART_BAUDRATE;
+	EmbeverStruct.uartdev.WordLength = UART_WORDLENGTH;
+	EmbeverStruct.uartdev.StopBits = UART_STOPBITS;
+	EmbeverStruct.uartdev.Parity = UART_PARITY;
+	EmbeverStruct.uartdev.HardwareFlowControl = UART_FLOWCONTROL;
 }
 
 
@@ -56,7 +60,7 @@ void Main_Task(void)
 	UartRxBufferPointer_Init();
 	
 	/*UART initialization*/
-	UART_Init(EmbeverStruct.uartdev.BaudRate, EmbeverStruct.uartdev.StopBits, EmbeverStruct.uartdev.Parity, EmbeverStruct.uartdev.HardwareFlowControl);
+	UART_Init(EmbeverStruct.uartdev.BaudRate, EmbeverStruct.uartdev.WordLength, EmbeverStruct.uartdev.StopBits, EmbeverStruct.uartdev.Parity, EmbeverStruct.uartdev.HardwareFlowControl);
 	
 	DHT22_Init();
 	
