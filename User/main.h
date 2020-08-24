@@ -96,9 +96,10 @@
 #define DMA2_Stream5_IRQnPriority					8
 
 /*Debug Message*/
-#define USE_FULL_ASSERT
+#define ASSERT(void) assert_failed((uint8_t *)__FILE__, __LINE__)
+
 #define HEAP_DEBUG
-#define HUMI_DEBUG
+//#define HUMI_DEBUG
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
 

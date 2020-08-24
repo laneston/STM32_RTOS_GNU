@@ -37,11 +37,10 @@ extern "C" {
 #define GPIO_DHT22_OUT        PCout(10)
 #define GPIO_DHT22_IN         PCin(10)
 
-
-
 extern void DHT22_Init(void);
 extern u8 DHT22_GetOneFrame(u8 *result);
-
+extern float DHT22_GetHumi_F(void);
+extern float DHT22_GetTemp_F(void);
 #ifdef __cplusplus
 }
 #endif

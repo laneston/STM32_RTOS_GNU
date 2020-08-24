@@ -24,25 +24,17 @@ TaskHandle_t DHT22_Task_Handle;
   */
 void DHT22_Task(void)
 {
-	u8 raw_data[4];
-	u16 temp, humi;
-	
+	float Humi;
+	float Temp;
 	
 	while(1)
 	{
-		if(DHT22_GetOneFrame(raw_data))
-		{
-			humi = (u16)(raw_data[0]<<8)|raw_data[1];
-			temp = (u16)(raw_data[2]<<8)|raw_data[3];
-			
-			printf("Humi:%d, Temp:%d\r\n", humi,temp);
-		}
-		else
-		{
-			#ifdef HUMI_DEBUG
-			printf("Temp-Humi GET ERROR\r\n");
-			#endif
-		}
+		Humi = DHT22_GetHumi_F();
+		printf("Humi:%.2f\r\n", Humi);
 		Delay(3000);
+		
+		Temp = DHT22_GetTemp_F();
+		printf("Temp:%.2f\r\n", Temp);		
+		Delay(3000);		
 	}
 }

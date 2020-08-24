@@ -159,9 +159,9 @@ void USART1_IRQHandler(void)
 	#endif
 	
 	#ifdef	UART_IT_RXNE
-	//	if(USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
+	//if(USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
 		{
-	//		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+	//USART_ClearITPendingBit(USART1, USART_IT_RXNE);
 			UartRecv_RXNE_IRQ();
 		}
 	#endif

@@ -105,9 +105,6 @@ extern xSemaphoreHandle Semaphore_uart_idle;
 extern xSemaphoreHandle Semaphore_uart_tc;
 extern xSemaphoreHandle Semaphore_uart_dma;
 
-
-#define ASSERT(void) assert_failed((uint8_t *)__FILE__, __LINE__))
-
 extern void assert_failed(uint8_t* file, uint32_t line);
 
 /*Confuguration of low level*/
