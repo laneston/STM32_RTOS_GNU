@@ -1,12 +1,13 @@
-BIN = ./output/STM32F4xx_LED.bin
-ELF = ./output/STM32F4xx_LED.elf
+BIN = ./output/STM32_RTOS_GUN.bin
+ELF = ./output/STM32_RTOS_GUN.elf
 
 FLASH_LD = ./User/STM32F417IG_FLASH.ld
 
 include FreeRTOS.mk
 include STM32F4xx.mk
 
-SRC += ./User/*.c
+SRC += ./User/main.c
+SRC += ./User/delay.c
 SRC += ./RTOS_Task/*.c
 SRC += ./Peripheral_BSP/*.c
 
@@ -39,6 +40,7 @@ STARTUP_RAW = $(wildcard $(STARTUP))
 STARTUP_OBJ = $(STARTUP_RAW:%.s=%.o)
 
 OUTPUT_OBJ = ./output/*.o
+OUTPUT_RAW = $(wildcard $(OUTPUT_OBJ))
 
 all:$(OBJ) $(STARTUP_OBJ) $(ELF) $(BIN)
 	@echo $(ELF)
@@ -50,7 +52,7 @@ $(BIN):$(ELF)
 	@echo
 
 $(ELF):
-	arm-none-eabi-gcc -o $@ $(LFLAGS) $(OUTPUT_OBJ) -T$(FLASH_LD)
+	arm-none-eabi-gcc -o $@ $(LFLAGS) $(OUTPUT_RAW) -T$(FLASH_LD)
 	@echo
 
 %.o:%.s
