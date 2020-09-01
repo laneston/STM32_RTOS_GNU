@@ -34,7 +34,7 @@ void DHT22_Task(void)
 		Delay(3000);
 		
 		Temp = DHT22_GetTemp_F();
-		printf("Temp:%.2f\r\n", Temp);		
-		Delay(3000);		
+		printf("Temp:%.2f\r\n", Temp);
+		Delay(3000);
 	}
 }
