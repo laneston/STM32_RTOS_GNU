@@ -28,7 +28,7 @@
 #include "BSPConfig.h"
 
 #include "main_task.h"
-//#include "dht22_task.h"
+#include "test_task.h"
 
 #include "stm32f4xx.h"
 #include "stm32f4xx_uart_bsp.h"

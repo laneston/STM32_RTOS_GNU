@@ -1,28 +1,30 @@
 /**
   ******************************************************************************
   * @author  Lanceli
-  * @version V1.0.0
+  * @version V1.0.1
   * @date    09-May-2020
-  * @brief   dht22 task
-	*          
+  * @brief   TEST task
+	*
   ******************************************************************************
   * @attention
   * This project is for learning only. If it is for commercial use, please contact the author.
-	* Website: developerlab.cn
-	* Copyright (c) 2020 Lanceli All rights reserved.
+  *
+  * website:developerlab.cn
+  *
+  * Copyright (c) 2020 Lanceli All rights reserved.
   ******************************************************************************
-  */
+  */  
 #include "main.h"
 	
 
-TaskHandle_t DHT22_Task_Handle;
+TaskHandle_t TEST_Task_Handle;
 
 /**
   * @brief  DHT22_Task
   * @param  None
   * @retval None
   */
-void DHT22_Task(void)
+void TEST_Task(void)
 {
 	float Humi;
 	float Temp;

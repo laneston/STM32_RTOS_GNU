@@ -66,16 +66,16 @@ void Main_Task(void)
 	
 	taskENTER_CRITICAL();	
 	
-//	xReturn = xTaskCreate((TaskFunction_t)DHT22_Task,
-//						(const char*)"DHT22_Task",
-//						(uint32_t)DHT22_Task_STACK_SIZE,
-//						(void*)NULL,
-//						(UBaseType_t)DHT22_Task_PRIORITY,
-//						(TaskHandle_t*)&DHT22_Task_Handle);
-//	if(pdPASS == xReturn){}
-//	else{
-//		printf("DHT22_Task ERROR\r\n");
-//	}
+	xReturn = xTaskCreate((TaskFunction_t)TEST_Task,
+						(const char*)"DHT22_Task",
+						(uint32_t)TEST_Task_STACK_SIZE,
+						(void*)NULL,
+						(UBaseType_t)TEST_Task_PRIORITY,
+						(TaskHandle_t*)&TEST_Task_Handle);
+	if(pdPASS == xReturn){}
+	else{
+		printf("DHT22_Task ERROR\r\n");
+	}
   
 	taskEXIT_CRITICAL();
 	

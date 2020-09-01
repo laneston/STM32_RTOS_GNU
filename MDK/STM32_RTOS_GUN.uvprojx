@@ -553,6 +553,11 @@
               <FileType>1</FileType>
               <FilePath>..\RTOS_Task\main_task.c</FilePath>
             </File>
+            <File>
+              <FileName>test_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RTOS_Task\test_task.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -22,11 +22,11 @@
 /* Task Stack Size-------------------------------------------------------------*/
 #define	Main_TASK_STACK_SIZE												 (configMINIMAL_STACK_SIZE*2)
 #define UART1_Receive_Task_STACK_SIZE								 (configMINIMAL_STACK_SIZE*2)
-#define DHT22_Task_STACK_SIZE								         (configMINIMAL_STACK_SIZE*2)
+#define TEST_Task_STACK_SIZE								         (configMINIMAL_STACK_SIZE*2)
 
 /*Priority from low to high---------------------------------------------------*/
 #define  Main_TASK_PRIORITY            		 					 (configMAX_PRIORITIES - 9)
-#define	 DHT22_Task_PRIORITY				                 (configMAX_PRIORITIES - 8)
+#define	 TEST_Task_PRIORITY				                   (configMAX_PRIORITIES - 8)
 #define	 UART1_Receive_Task_PRIORITY				         (configMAX_PRIORITIES - 2)
 
 
