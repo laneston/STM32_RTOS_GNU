@@ -392,7 +392,7 @@ void ClearRxBuffer1WirtePointer(UARTBufferTypeDef *p, u16 dmaITCounter)
   * @brief  Read the data of heap buffer to extral buffer
   * @param  p, UARTBufferTypeDef
   * @param  ExtralBuffer, A memory area for exchanging data
-  * @param  length£¬the length of exchanging data
+  * @param  lengthï¿½ï¿½the length of exchanging data
   * @retval None
   */
 u8 ReadHeapBufferToExtralBuffer(UARTBufferTypeDef *p, u8 *ExtralBuffer, u16 length)
@@ -768,7 +768,7 @@ PUTCHAR_PROTOTYPE
   */
 void assert_failed(uint8_t* file, uint32_t line)
 {
-	printf("Wrong parameters value: file %s on line %d\r\n", file, line);
+	printf("Wrong parameters value: file %s on line %ld\r\n", file, line);
   /* Infinite loop */
   while (1)
   {

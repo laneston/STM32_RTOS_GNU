@@ -34,7 +34,7 @@ void stSramInit(Heap_TypeDef *p, u32 headAddr, u32 heapSize)
 #endif
     offset = (u32)(headAddr%ALIGNMENT_SIZE);
 #ifdef HEAP_DEBUG
-    printf("offset:%d\r\n",offset);
+    printf("offset:%ld\r\n",offset);
 #endif
     /*alignment*/
     if(offset)
@@ -51,7 +51,7 @@ void stSramInit(Heap_TypeDef *p, u32 headAddr, u32 heapSize)
     
     offset = (headAddr + heapSize)%ALIGNMENT_SIZE;
 #ifdef HEAP_DEBUG
-    printf("offset:%d\r\n",offset);
+    printf("offset:%ld\r\n",offset);
 #endif
     if(offset)
     {
@@ -67,13 +67,13 @@ void stSramInit(Heap_TypeDef *p, u32 headAddr, u32 heapSize)
     
     p->heap_size = ((u32)((u8 *)p->heap_tail - (u8 *)p->heap_head));
 #ifdef HEAP_DEBUG
-    printf("heap_size:%d\r\n",p->heap_size);
+    printf("heap_size:%ld\r\n",p->heap_size);
 #endif
     
     p->heap_current = p->heap_head;
     p->heap_residual = p->heap_size;
 #ifdef HEAP_DEBUG
-    printf("heap_residual:%d\r\nheap_current:%p\r\n",p->heap_residual,p->heap_current);
+    printf("heap_residual:%ld\r\nheap_current:%p\r\n",p->heap_residual,p->heap_current);
 #endif
 }
 
@@ -94,7 +94,7 @@ void *stSramMalloc(Heap_TypeDef *p, u32 xWantedSize )
         pvReturn = p->heap_current;	
       offset = xWantedSize%ALIGNMENT_SIZE;
 #ifdef HEAP_DEBUG
-    printf("offset:%d\r\n",offset);
+    printf("offset:%ld\r\n",offset);
 #endif		
         if(offset)
         {
@@ -107,7 +107,7 @@ void *stSramMalloc(Heap_TypeDef *p, u32 xWantedSize )
         }
         p->heap_residual = (u32)((u8 *)p->heap_tail - (u8 *)p->heap_current);
 #ifdef HEAP_DEBUG
-      printf("heap_residual:%d\r\nheap_current:%p\r\n",p->heap_residual,p->heap_current);
+      printf("heap_residual:%ld\r\nheap_current:%p\r\n",p->heap_residual,p->heap_current);
 #endif
     }
     else
