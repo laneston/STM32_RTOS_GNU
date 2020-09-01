@@ -3,10 +3,10 @@
   * @author  Lanceli
   * @version V1.0.1
   * @date    09-Aug-2020
-  * @brief   on-and off-chip memory allocation
-  *          How to use it.
-  *          1. initializate memory space.[void stSramInit(Heap_TypeDef *p, u32 headAddr, u32 heapSize)]
-  *          2. Allocate memory.[void *stSramMalloc(Heap_TypeDef *p, u32 xWantedSize )]
+  * @brief   Internal/external SRAM allocation
+  *          Define the allocated memory block
+	*
+	* @note    stSramInit(Heap_TypeDef *p, u32 headAddr, u32 heapSize) -> stSramMalloc(Heap_TypeDef *p, u32 xWantedSize )
   ******************************************************************************
   * @attention
   * This project is for learning only. If it is for commercial use, please contact the author.
@@ -16,14 +16,14 @@
   * Copyright (c) 2020 Lanceli All rights reserved.
   ******************************************************************************
   */
+
 #include "main.h"
 
 
 /*
 *function: Initialize SRAM.
-*param: p,		    object of Heap_TypeDef Struct.
+*param: p, object of Heap_TypeDef Struct.Define the allocated memory block.
 *param: heapHead,	the head address of SRAM.
-
 *param: heapSize, the size of SRAM that can be use.
 */
 void stSramInit(Heap_TypeDef *p, u32 headAddr, u32 heapSize)
@@ -79,8 +79,8 @@ void stSramInit(Heap_TypeDef *p, u32 headAddr, u32 heapSize)
 
 /*
 *function: Allocate memory.
-*param: p,				object of Heap_TypeDef Struct.
-*param: xWantedSize,	the size you need.
+*param: p, object of Heap_TypeDef Struct.
+*param: xWantedSize, the size you need.
 
 *return: the pointer of the memory.
 */

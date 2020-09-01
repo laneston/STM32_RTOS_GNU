@@ -28,11 +28,12 @@
 #include "BSPConfig.h"
 
 #include "main_task.h"
-#include "uart_task.h"
+//#include "dht22_task.h"
 
 #include "stm32f4xx.h"
 #include "stm32f4xx_uart_bsp.h"
 #include "stm32f4xx_heap_bsp.h"
+#include "stm32f4xx_dht22_bsp.h"
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
@@ -95,8 +96,10 @@
 #define DMA2_Stream5_IRQnPriority					8
 
 /*Debug Message*/
+#define ASSERT(void) assert_failed((uint8_t *)__FILE__, __LINE__)
+
 #define HEAP_DEBUG
-#define NAND_DEBUG
+//#define HUMI_DEBUG
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
 

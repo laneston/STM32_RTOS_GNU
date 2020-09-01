@@ -30,7 +30,11 @@ EmbeverConfig_TypeDef EmbeverStruct;
 static void Device_Init(void)
 {
 	/*Initialization of serial port parameters*/
-	UartParam_Init();
+	EmbeverStruct.uartdev.BaudRate = UART_BAUDRATE;
+	EmbeverStruct.uartdev.WordLength = UART_WORDLENGTH;
+	EmbeverStruct.uartdev.StopBits = UART_STOPBITS;
+	EmbeverStruct.uartdev.Parity = UART_PARITY;
+	EmbeverStruct.uartdev.HardwareFlowControl = UART_FLOWCONTROL;
 }
 
 
@@ -41,7 +45,7 @@ static void Device_Init(void)
   */
 void Main_Task(void)
 {
-//	BaseType_t xReturn = pdPASS;
+	BaseType_t xReturn = pdPASS;
 	
 	/*Delay timer initialization*/
 	DelayTimer_Init(TIM2_Period);
@@ -56,21 +60,22 @@ void Main_Task(void)
 	UartRxBufferPointer_Init();
 	
 	/*UART initialization*/
-	UART_Init(EmbeverStruct.uartdev.BaudRate, EmbeverStruct.uartdev.StopBits, EmbeverStruct.uartdev.Parity, EmbeverStruct.uartdev.HardwareFlowControl);
+	UART_Init(EmbeverStruct.uartdev.BaudRate, EmbeverStruct.uartdev.WordLength, EmbeverStruct.uartdev.StopBits, EmbeverStruct.uartdev.Parity, EmbeverStruct.uartdev.HardwareFlowControl);
 	
-	
-	
+	DHT22_Init();
 	
 	taskENTER_CRITICAL();	
 	
-//	xReturn = xTaskCreate((TaskFunction_t)SramTesting_Task,
-//						(const char*)"SramTesting_Task",
-//						(uint32_t)SramTesting_Task_SIZE,
+//	xReturn = xTaskCreate((TaskFunction_t)DHT22_Task,
+//						(const char*)"DHT22_Task",
+//						(uint32_t)DHT22_Task_STACK_SIZE,
 //						(void*)NULL,
-//						(UBaseType_t)SramTesting_Task_PRIORITY,
-//						(TaskHandle_t*)&SramTesting_Task_Handle);
+//						(UBaseType_t)DHT22_Task_PRIORITY,
+//						(TaskHandle_t*)&DHT22_Task_Handle);
 //	if(pdPASS == xReturn){}
-//	else{}
+//	else{
+//		printf("DHT22_Task ERROR\r\n");
+//	}
   
 	taskEXIT_CRITICAL();
 	
