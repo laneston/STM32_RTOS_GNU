@@ -3,6 +3,73 @@ This is a project template about RTOS in STM32F4xx. Compilated by keil_v5 and GC
 
 
 
+## 内存信息文件解析
+
+文件 STM32F417IG_FLASH.ld 是用来存放芯片内存信息，笔者想向大家说明的是，该文件与 Makefile 类似，同样为脚本文件，不参与代码编译链接。以下笔者将对这个文件进行一个简单的解析。
+
+首先我们需要普及几个简单的知识点：
+
+1. .text   段是用来存放程序执行代码的区；
+2. .data   段通常是用来存放程序中已初始化的全局变量的一块内存区域，属于静态内存分配。
+3. .bss    段通常是指用来存放程序中未初始化的全局变量的一块内存区域。属于静态内存分配。
+4. .rodata 段通常是指用来存放程序中常量的一块内存区域。属于静态内存分配。
+
+下面我们就开始正式进行分析：
+
+### part 0
+
+ENTRY(Reset_Handler)
+
+第一条运行的指令被称为入口点entry point,可以使用ENTRY链接脚本命令设置entry point，参数是一个符号名。有几种方法可以设置entry point,链接器会按照如下的顺序来尝试各种方法，只要任何一种方法成功则会停止：
+
+1. the ‘-e’ entry command-line option;
+2. the ENTRY(symbol) command in a linker script;
+3. the value of the symbol start, if defined;
+4. the address of the first byte of the ‘.text’ section, if present;
+5. The address 0
+
+### part 1
+_estack = 0x2001FFFF;
+
+这段声明内存末尾地址。
+
+### part 2
+
+_Min_Heap_Size = 0x200;
+_Min_Stack_Size = 0x400;
+
+这段定义了堆和栈的最小空间大小。如果定义的数值不符合内存的规格，在编译时会产生链接错误。
+
+### part 3
+
+```
+MEMORY
+{
+FLASH (rx)       : ORIGIN = 0x8000000, LENGTH = 1024K
+RAM (xrw)        : ORIGIN = 0x20000000, LENGTH = 128K
+CCMRAM (rw)      : ORIGIN = 0x10000000, LENGTH = 64K
+}
+```
+
+这段定义了 FLASH RAM 和 CCMRAM 的大小信息，(xrw)表明了权限，r是读、w是写、x是执行。
+
+### part 4
+
+```
+SECTIONS
+{
+    ...
+    secname:{
+        contents
+    }
+    ...
+}
+```
+
+它是脚本文件中最重要的元素，不可缺省。它的作用就是用来描述输出文件的布局。secname 和 contents 是必须的，其他都是可选的参数。
+
+关于链接脚本的详细内容请看
+
 ## 问题集锦
 
 ### 链接错误提示一
