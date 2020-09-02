@@ -774,3 +774,52 @@ void assert_failed(uint8_t* file, uint32_t line)
   {
   }
 }
+
+
+#ifdef	UART_IT
+
+void USART1_IRQHandler(void)
+{
+	#ifdef	UART_IT_IDLE
+		uint8_t clear;
+	#endif
+	
+	#ifdef	UART_IT_RXNE
+	//if(USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
+		{
+	//USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+			UartRecv_RXNE_IRQ();
+		}
+	#endif
+	
+	#ifdef	UART_IT_IDLE
+		if(USART_GetITStatus(USART1, USART_IT_IDLE) == SET)
+		{
+			clear = USART1->SR;
+			clear = USART1->DR;
+			clear = clear;
+			USART_ClearITPendingBit(USART1, USART_IT_IDLE);
+			UartRecv_IDLE_IRQ();
+		}
+	#endif
+	
+	#ifdef	UART_IT_TC
+		if(USART_GetITStatus(USART1, USART_IT_TC) == SET)
+		{
+			USART_ClearITPendingBit(USART1, USART_IT_TC);
+			UartTransmit_IRQ();
+		}
+	#endif	
+}
+  #ifdef	UART_DMA_IT
+	void DMA2_Stream5_IRQHandler(void)
+	{
+		if(DMA_GetITStatus(DMA2_Stream5, DMA_IT_TCIF5) == SET)
+		{
+			DMA_ClearITPendingBit(DMA2_Stream5, DMA_IT_TCIF5);
+			DmaComplete_IRQ();
+		}
+	}
+	#endif/*UART_DMA_IT*/
+
+#endif/*UART_IT*/

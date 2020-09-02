@@ -26,11 +26,13 @@ TaskHandle_t TEST_Task_Handle;
   */
 void TEST_Task(void)
 {
-	float Humi;
-	float Temp;
+//	float Humi;
+//	float Temp;
 	
 	while(1)
 	{
+		/* HDT22 Test*****************
+		
 		Humi = DHT22_GetHumi_F();
 		printf("Humi:%.2f\r\n", Humi);
 		Delay(3000);
@@ -38,5 +40,10 @@ void TEST_Task(void)
 		Temp = DHT22_GetTemp_F();
 		printf("Temp:%.2f\r\n", Temp);
 		Delay(3000);
+		
+		******************************
+		*/
+		
+		
 	}
 }
