@@ -83,6 +83,7 @@ SECTIONS
   } >FLASH
 
   .ARM.extab   : { *(.ARM.extab* .gnu.linkonce.armextab.*) } >FLASH
+  
   .ARM : {
     __exidx_start = .;
     *(.ARM.exidx*)
