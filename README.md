@@ -1,11 +1,9 @@
 # STM32_RTOS_GUN
 This is a project template about RTOS in STM32F4xx. Compilated by keil_v5 and GCC Cross compilation chain.
 
+## 链接文件解析
 
-
-## 内存信息文件解析
-
-文件 STM32F417IG_FLASH.ld 是用来存放芯片内存信息，笔者想向大家说明的是，该文件与 Makefile 类似，同样为脚本文件，不参与代码编译链接。以下笔者将对这个文件进行一个简单的解析。
+文件 STM32F417IG_FLASH.ld 是用来存放芯片内存信息，笔者想向大家说明的是，该文件与 Makefile 类似，同样为脚本文件，不参与代码编译。以下笔者将对这个文件进行一个简单的解析。
 
 首先我们需要普及几个简单的知识点：
 
@@ -66,15 +64,13 @@ SECTIONS
 }
 ```
 
-它是脚本文件中最重要的元素，不可缺省。它的作用就是用来描述输出文件的布局。secname 和 contents 是必须的，其他都是可选的参数。
+它是脚本文件中最重要的元素，不可缺省。它的作用就是用来描述输出文件的布局。secname 和 contents 是必须的，其他都是可选的参数。关于链接脚本更为详细解的析内容请看 <a href = "https://github.com/laneston/Note/blob/master/LdScript_Note.md"> LdScript_Note </a>。
 
-关于链接脚本的详细内容请看
+## 注意事项
 
-## 问题集锦
+### 链接错误提示
 
-### 链接错误提示一
-
-在进行编译的时候，我们会看到这样的警告：
+在进行编译的时候，出现这样的警告：
 
 ```
 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-sbrkr.o): in function `_sbrk_r':
@@ -101,7 +97,7 @@ SECTIONS
 
 造成这个错误的原因是使用 printf ，scanf ，malloc 等函数，需要实现 `_read' `_lseek' `_isatty' `_fstat' `_write' `_sbrk' 函数。因为使用 GNU 编译的时候，printf 底层实现已经不是 fputc 了，而是__write：
 
-可以引用静态库 libnosys.a 来解决，在编译标签 LFLAGS 添加如下参数：
+可以引用静态库 libnosys.a 来解决，在 Makefile 的编译标签 LFLAGS 添加如下参数：
 
 ```
 --specs=nosys.specs
