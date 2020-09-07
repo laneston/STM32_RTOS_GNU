@@ -172,7 +172,7 @@ SECTIONS
     . = . + _Min_Heap_Size;
     . = . + _Min_Stack_Size;
     . = ALIGN(4);
-  } >RAM  
+  } >RAM
 
   /* Remove information from the standard libraries */
   /DISCARD/ :
