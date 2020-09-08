@@ -429,6 +429,11 @@
               <FilePath>..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\src\misc.c</FilePath>
             </File>
             <File>
+              <FileName>stm32f4xx_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32f4xx_gpio.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c</FilePath>
@@ -447,6 +452,11 @@
               <FileName>stm32f4xx_tim.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F4xx_DSP_StdPeriph_Lib_V1.8.0\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -557,6 +567,16 @@
               <FileName>stm32f4xx_led_bsp.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Peripheral_BSP\stm32f4xx_led_bsp.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_heap_bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral_BSP\stm32f4xx_heap_bsp.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_uart_bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral_BSP\stm32f4xx_uart_bsp.c</FilePath>
             </File>
           </Files>
         </Group>

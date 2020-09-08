@@ -16,6 +16,9 @@
   */
 #include "main.h"
 
+Heap_TypeDef HeapStruct_eSRAM;
+
+
 TaskHandle_t Main_Task_Handle = NULL;/*Main Task Handle*/
 
 /**
@@ -29,6 +32,8 @@ void Main_Task(void)
 	
 	/*Delay timer initialization*/
 	DelayTimer_Init(TIM2_Period);
+	
+	stSramInit(&HeapStruct_eSRAM, STM32F4XX_eSRAM_START, STM32F4XX_eSRAM_SIZE);
 
 	led_init();
 	

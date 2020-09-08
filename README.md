@@ -68,6 +68,10 @@ SECTIONS
 
 ## 注意事项
 
+### printf函数重映射
+
+在 GCC 中没有 Keil_v5 的 MicroLib 库，是调用标准库实现的 printf 函数，GCC 标准库的底层是使用 _write() 函数实现输出的。
+
 ### 链接错误提示
 
 在进行编译的时候，出现这样的警告：

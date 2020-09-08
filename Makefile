@@ -17,6 +17,7 @@ INC += -I./User
 
 DEF += -DSTM32F40_41xxx 
 DEF += -DUSE_STDPERIPH_DRIVER
+DEF += -D__ARM_NONE_EABI
 
 CFLAGS += -mcpu=cortex-m4
 CFLAGS += -mfloat-abi=hard
