@@ -27,7 +27,7 @@ void led_init(void)
 	
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_LED1, ENABLE);
 	
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_LED1;
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_LED1;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;

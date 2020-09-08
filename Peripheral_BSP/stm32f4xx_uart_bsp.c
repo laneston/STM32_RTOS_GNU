@@ -20,12 +20,16 @@
 #include "main.h"
 
 
+#ifdef __ARM_NONE_EABI
 
+#else
 struct __FILE {
     int handle; 
 }; 
 FILE __stdout;
 void _sys_exit(int x) {	x = x;}
+#endif /* __ARM_NONE_EABI */
+
 
 /* Transmit buffer block pointer */
 static uint8_t *RxBuffer0;
@@ -137,8 +141,8 @@ void UART1_Receive_Task(void)
 void UartDmaStreamSend(u8 *buffer, u16 length)
 {
 	DMA_ClearFlag(DMA2_Stream7, DMA_FLAG_TCIF7);
-  /* Clear USART Transfer Complete Flags */
-  USART_ClearFlag(USART1,USART_FLAG_TC);
+    /* Clear USART Transfer Complete Flags */
+    USART_ClearFlag(USART1,USART_FLAG_TC);
 	DMA_Cmd(DMA2_Stream7,DISABLE);
 	memcpy(TxBuffer, buffer, length);
 	DMA_SetCurrDataCounter(DMA2_Stream7, length);
@@ -394,7 +398,7 @@ void ClearRxBuffer1WirtePointer(UARTBufferTypeDef *p, u16 dmaITCounter)
   * @brief  Read the data of heap buffer to extral buffer
   * @param  p, UARTBufferTypeDef
   * @param  ExtralBuffer, A memory area for exchanging data
-  * @param  length��the length of exchanging data
+  * @param  length, the length of exchanging data
   * @retval None
   */
 u8 ReadHeapBufferToExtralBuffer(UARTBufferTypeDef *p, u8 *ExtralBuffer, u16 length)
