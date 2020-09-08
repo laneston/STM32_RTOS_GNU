@@ -33,6 +33,7 @@ LFLAGS += -mthumb
 LFLAGS += -mfpu=fpv4-sp-d16
 LFLAGS += -Wl,--gc-sections
 LFLAGS += --specs=nosys.specs
+LFLAGS += -Wl,-Map=STM32_RTOS_GUN.map
 
 SRC_RAW = $(wildcard $(SRC))
 OBJ = $(SRC_RAW:%.c=%.o)
@@ -53,6 +54,7 @@ $(BIN):$(ELF)
 
 $(ELF):
 	arm-none-eabi-gcc -o $@ $(LFLAGS) $(OUTPUT_OBJ) -T$(FLASH_LD)
+	mv *.map ./output
 	@echo
 
 %.o:%.s
@@ -69,4 +71,5 @@ $(ELF):
 clean :
 	-rm ./output/*.o\
 	    ./output/*.elf\
-		./output/*.bin
+		./output/*.bin\
+		./output/*.map

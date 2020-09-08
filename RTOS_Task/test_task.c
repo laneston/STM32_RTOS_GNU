@@ -44,6 +44,9 @@ void TEST_Task(void)
 		******************************
 		*/
 		
-		
+		LED1 = SET;
+    Delay(500);
+    LED1 = RESET;
+    Delay(500);
 	}
 }
