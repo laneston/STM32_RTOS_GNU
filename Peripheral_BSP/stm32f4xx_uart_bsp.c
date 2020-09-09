@@ -69,7 +69,7 @@ UARTBufferTypeDef	RxdBufferStructure;
   * @param  None
   * @retval None
   */
-void UART1_Receive_Task(void)
+static void UART1_Receive_Task(void)
 {
 	static u16 UARTWirteResidualLength = 0;
 	
@@ -684,12 +684,12 @@ void UART_Init(u32 boundrate, u16 WordLength, u16 StopBits, u16 Parity, u16 Hard
         }
     #endif				
 				
-	xReturn = xTaskCreate((TaskFunction_t)TEST_Task,
-						(const char*)"DHT22_Task",
-						(uint32_t)TEST_Task_STACK_SIZE,
+	xReturn = xTaskCreate((TaskFunction_t)UART1_Receive_Task,
+						(const char*)"UART1_Receive_Task",
+						(uint32_t)UART1_Receive_Task_STACK_SIZE,
 						(void*)NULL,
-						(UBaseType_t)TEST_Task_PRIORITY,
-						(TaskHandle_t*)&TEST_Task_Handle);
+						(UBaseType_t)UART1_Receive_Task_PRIORITY,
+						(TaskHandle_t*)&UART1_Receive_Task_Handle);
 	if(pdPASS == xReturn){}
 	else{}
         

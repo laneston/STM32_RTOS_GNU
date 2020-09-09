@@ -91,21 +91,13 @@ typedef struct
 	
 	u32   send_counter;
 	u32   receive_counter;
-}UARTBufferTypeDef;
-	
+}UARTBufferTypeDef;	
 
-extern TaskHandle_t UART1_Receive_Task_Handle;
 extern UARTBufferTypeDef	RxdBufferStructure;
-
-
-extern xSemaphoreHandle Semaphore_uart_idle;
-extern xSemaphoreHandle Semaphore_uart_tc;
-extern xSemaphoreHandle Semaphore_uart_dma;
 
 extern void assert_failed(uint8_t* file, uint32_t line);
 
 /*Confuguration of low level*/
-extern void UART1_Receive_Task(void);
 extern u8 WirteToUartRxBufferFromRxBuffer0(UARTBufferTypeDef *p, u16 length);
 extern u8 WirteToUartRxBufferFromRxBuffer1(UARTBufferTypeDef *p, u16 length);
 extern void ClearRxBuffer0WirtePointer(UARTBufferTypeDef *p, u16 dmaITCounter);
