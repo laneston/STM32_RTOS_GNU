@@ -47,6 +47,7 @@ typedef struct
 #pragma pack()
 	
 extern Heap_TypeDef HeapStruct_SRAM1;
+extern Heap_TypeDef HeapStruct_eSRAM;
 
 extern void stSramInit(Heap_TypeDef *p, u32 heapHead, u32 heapSize);
 extern void *stSramMalloc(Heap_TypeDef *p, u32 xWantedSize );

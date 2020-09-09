@@ -16,11 +16,11 @@
   */
 #include "main.h"
 
-TaskHandle_t Main_Task_Handle = NULL;/*Main Task Handle*/
-
 Heap_TypeDef HeapStruct_SRAM1;
+//Heap_TypeDef HeapStruct_eSRAM;
 EmbeverConfig_TypeDef EmbeverStruct;
 
+TaskHandle_t Main_Task_Handle = NULL;/*Main Task Handle*/
 
 /**
   * @brief  Peripheral parameter initialization.
@@ -37,7 +37,6 @@ static void Device_Init(void)
 	EmbeverStruct.uartdev.HardwareFlowControl = UART_FLOWCONTROL;
 }
 
-
 /**
   * @brief  main task
   * @param  None
@@ -46,25 +45,21 @@ static void Device_Init(void)
 void Main_Task(void)
 {
 	BaseType_t xReturn = pdPASS;
-	
+
+	Device_Init();
+	/*
+	SRAM_Initilization();
+	*/
 	/*Delay timer initialization*/
 	DelayTimer_Init(TIM2_Period);
 	
-	/*Memory heap initialization*/
 	stSramInit(&HeapStruct_SRAM1, STM32F4XX_SRAM1_START, STM32F4XX_SRAM1_SIZE);
-	
-	/*Peripheral parameters initialization.*/
-	Device_Init();
-	
-	/*UART receive memory initialization. This function is required if receive is enabled*/
-	UartRxBufferPointer_Init();
-	
-	/*UART initialization*/
+
 	UART_Init(EmbeverStruct.uartdev.BaudRate, EmbeverStruct.uartdev.WordLength, EmbeverStruct.uartdev.StopBits, EmbeverStruct.uartdev.Parity, EmbeverStruct.uartdev.HardwareFlowControl);
 	
-	DHT22_Init();
+	led_init();
 	
-	taskENTER_CRITICAL();	
+	taskENTER_CRITICAL();
 	
 	xReturn = xTaskCreate((TaskFunction_t)TEST_Task,
 						(const char*)"DHT22_Task",
@@ -74,7 +69,7 @@ void Main_Task(void)
 						(TaskHandle_t*)&TEST_Task_Handle);
 	if(pdPASS == xReturn){}
 	else{
-		printf("DHT22_Task ERROR\r\n");
+		printf("TEST_Task ERROR\r\n");
 	}
   
 	taskEXIT_CRITICAL();

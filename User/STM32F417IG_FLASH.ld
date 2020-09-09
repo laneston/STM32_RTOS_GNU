@@ -31,18 +31,18 @@
 ENTRY(Reset_Handler)
 
 /* Highest address of the user mode stack */
-_estack = 0x2001FFFF;        /* end of RAM */
+_estack = 0x1000FFFF;        /* end of CCMRAM */
 
 /* Generate a link error if heap and stack don't fit into RAM */
 _Min_Heap_Size = 0x200;      /* required amount of heap  */
-_Min_Stack_Size = 0x400;     /* required amount of stack */
+_Min_Stack_Size = 0x100;     /* required amount of stack */
 
 /* Specify the memory areas */
 MEMORY
 {
 FLASH (rx)       : ORIGIN = 0x8000000, LENGTH = 1024K
 RAM (xrw)        : ORIGIN = 0x20000000, LENGTH = 128K
-CCMRAM (rw)      : ORIGIN = 0x10000000, LENGTH = 64K
+CCMRAM (xrw)     : ORIGIN = 0x10000000, LENGTH = 64K
 }
 
 /* Define output sections */
@@ -116,7 +116,7 @@ SECTIONS
   _sidata = LOADADDR(.data);
 
   /* Initialized data sections goes into RAM, load LMA copy after code */
-  .data : 
+  .data :
   {
     . = ALIGN(4);
     _sdata = .;        /* create a global symbol at data start */
@@ -125,7 +125,7 @@ SECTIONS
 
     . = ALIGN(4);
     _edata = .;        /* define a global symbol at data end */
-  } >RAM AT> FLASH
+  } >CCMRAM AT>FLASH
 
   _siccmram = LOADADDR(.ccmram);
 
@@ -141,10 +141,10 @@ SECTIONS
     _sccmram = .;       /* create a global symbol at ccmram start */
     *(.ccmram)
     *(.ccmram*)
-    
+
     . = ALIGN(4);
     _eccmram = .;       /* create a global symbol at ccmram end */
-  } >CCMRAM AT> FLASH
+  } >CCMRAM AT>FLASH
 
   
   /* Uninitialized data section */
@@ -161,7 +161,7 @@ SECTIONS
     . = ALIGN(4);
     _ebss = .;         /* define a global symbol at bss end */
     __bss_end__ = _ebss;
-  } >RAM
+  } >CCMRAM
 
   /* User_heap_stack section, used to check that there is enough RAM left */
   ._user_heap_stack :
@@ -172,7 +172,7 @@ SECTIONS
     . = . + _Min_Heap_Size;
     . = . + _Min_Stack_Size;
     . = ALIGN(4);
-  } >RAM
+  } >CCMRAM
 
   /* Remove information from the standard libraries */
   /DISCARD/ :

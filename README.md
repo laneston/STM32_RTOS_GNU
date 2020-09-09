@@ -68,6 +68,74 @@ SECTIONS
 
 ## 注意事项
 
+### printf函数重映射
+
+在 GCC 中没有 Keil_v5 的 MicroLib 库，是调用标准库实现的 printf 函数，GCC 标准库的底层是使用 _write() 函数实现输出的。
+
+```
+#define PUTCHAR_PROTOTYPE int _write (int fd, char *pBuffer, int size)
+
+PUTCHAR_PROTOTYPE
+{
+  u16 i;
+  for(i=0; i<size; i++)
+  {
+	  USART_SendData(USART1, (uint8_t)pBuffer[i]);
+	  while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
+  }
+  return i;
+}
+```
+
+### CCMRAM
+
+为了加速程勋的运行速率，本项目内核与系统运行在 CCM RAM 中，所以链接脚本做了相关修改：
+
+```
+CCMRAM (xrw)     : ORIGIN = 0x10000000, LENGTH = 64K
+
+  /* Initialized data sections goes into RAM, load LMA copy after code */
+  .data :
+  {
+    . = ALIGN(4);
+    _sdata = .;        /* create a global symbol at data start */
+    *(.data)           /* .data sections */
+    *(.data*)          /* .data* sections */
+
+    . = ALIGN(4);
+    _edata = .;        /* define a global symbol at data end */
+  } >CCMRAM AT>FLASH
+
+  /* Uninitialized data section */
+  . = ALIGN(4);
+  .bss :
+  {
+    /* This is used by the startup in order to initialize the .bss secion */
+    _sbss = .;         /* define a global symbol at bss start */
+    __bss_start__ = _sbss;
+    *(.bss)
+    *(.bss*)
+    *(COMMON)
+
+    . = ALIGN(4);
+    _ebss = .;         /* define a global symbol at bss end */
+    __bss_end__ = _ebss;
+  } >CCMRAM
+
+  /* User_heap_stack section, used to check that there is enough RAM left */
+  ._user_heap_stack :
+  {
+    . = ALIGN(4);
+    PROVIDE ( end = . );
+    PROVIDE ( _end = . );
+    . = . + _Min_Heap_Size;
+    . = . + _Min_Stack_Size;
+    . = ALIGN(4);
+  } >CCMRAM
+```
+
+以上主要是将 RAM 映射改为 CCMRAM 。值得注意的是，当使用起始地址为 0x2000 0000 的 RAM ，或者使用起始地址为 0x6800 0000 的片外 SRAM 时，需要使用项目中的 Peripheral_BSP\stm32f4xx_heap_bsp.c 文件用于片内/外内存的定义。
+
 ### 链接错误提示
 
 在进行编译的时候，出现这样的警告：

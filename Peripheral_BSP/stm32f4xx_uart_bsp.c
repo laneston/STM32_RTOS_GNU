@@ -20,11 +20,16 @@
 #include "main.h"
 
 
+#ifdef __ARM_NONE_EABI
+
+#else
 struct __FILE {
     int handle; 
 }; 
 FILE __stdout;
 void _sys_exit(int x) {	x = x;}
+#endif /* __ARM_NONE_EABI */
+
 
 /* Transmit buffer block pointer */
 static uint8_t *RxBuffer0;
@@ -64,9 +69,10 @@ UARTBufferTypeDef	RxdBufferStructure;
   * @param  None
   * @retval None
   */
-void UART1_Receive_Task(void)
+static void UART1_Receive_Task(void)
 {
 	static u16 UARTWirteResidualLength = 0;
+	
 	while(1)
 	{
 		/*****************Serial port dma interrupt execution***********************/
@@ -135,8 +141,8 @@ void UART1_Receive_Task(void)
 void UartDmaStreamSend(u8 *buffer, u16 length)
 {
 	DMA_ClearFlag(DMA2_Stream7, DMA_FLAG_TCIF7);
-  /* Clear USART Transfer Complete Flags */
-  USART_ClearFlag(USART1,USART_FLAG_TC);
+    /* Clear USART Transfer Complete Flags */
+    USART_ClearFlag(USART1,USART_FLAG_TC);
 	DMA_Cmd(DMA2_Stream7,DISABLE);
 	memcpy(TxBuffer, buffer, length);
 	DMA_SetCurrDataCounter(DMA2_Stream7, length);
@@ -149,15 +155,15 @@ void UartDmaStreamSend(u8 *buffer, u16 length)
   * @param  None
   * @retval None
   */
-void UartRxBufferPointer_Init(void)
-{	
+static void UartRxBufferPointer_Init(void)
+{
 	heapBuffer_HeadP = stSramMalloc(&HeapStruct_SRAM1, UART_HEAP_BUFFER_SIZE);
 	if(heapBuffer_HeadP == NULL)
 	{
 #ifndef HEAP_DEBUG
 		ASSERT();
 #endif
-	}	
+	}
 	
 	RxBuffer0 = stSramMalloc(&HeapStruct_SRAM1, UART_RX_BUFFER_SIZE);
 	if(RxBuffer0 == NULL)
@@ -207,7 +213,6 @@ void UartRxBufferPointer_Init(void)
 	RxdBufferStructure.dmaCompleteCounter = 0;	
 	RxdBufferStructure.dmaReversalValue = RESET;
 }
-
 
 
 /***********************Extract data from memory heap***************************
@@ -392,8 +397,8 @@ void ClearRxBuffer1WirtePointer(UARTBufferTypeDef *p, u16 dmaITCounter)
   * @brief  Read the data of heap buffer to extral buffer
   * @param  p, UARTBufferTypeDef
   * @param  ExtralBuffer, A memory area for exchanging data
-  * @param  length��the length of exchanging data
-  * @retval None
+  * @param  length, the length of exchanging data
+  * @retval return RESET if fail, or SET if success.
   */
 u8 ReadHeapBufferToExtralBuffer(UARTBufferTypeDef *p, u8 *ExtralBuffer, u16 length)
 {
@@ -527,7 +532,7 @@ static void USART_NVIC(void)
   * @retval None
   */
 void USART_Config(u32 boundrate, u16 WordLength, u16 StopBits, u16 Parity, u16 HardwareFlowControl)
-{		
+{
   USART_InitTypeDef USART_InitStructure;
     
   
@@ -539,7 +544,7 @@ void USART_Config(u32 boundrate, u16 WordLength, u16 StopBits, u16 Parity, u16 H
         - Hardware flow control disabled (RTS and CTS signals)
         - Receive and transmit enabled
   */
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1,ENABLE);	
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1,ENABLE);	
     
   USART_InitStructure.USART_BaudRate = boundrate;
   USART_InitStructure.USART_WordLength = WordLength;
@@ -619,7 +624,11 @@ void UART_Init_115200(void)
 
 void UART_Init(u32 boundrate, u16 WordLength, u16 StopBits, u16 Parity, u16 HardwareFlowControl)
 {
-    USART_Pins();
+	BaseType_t xReturn = pdPASS;
+	
+	UartRxBufferPointer_Init();
+	
+  USART_Pins();
   /* USARTx configuration ----------------------------------------------------*/
   /* Enable the USART OverSampling by 8 */
     
@@ -673,6 +682,17 @@ void UART_Init(u32 boundrate, u16 WordLength, u16 StopBits, u16 Parity, u16 Hard
             xSemaphoreTake( Semaphore_uart_dma, 0);
         }
     #endif
+	
+	taskENTER_CRITICAL();
+	xReturn = xTaskCreate((TaskFunction_t)UART1_Receive_Task,
+						(const char*)"UART1_Receive_Task",
+						(uint32_t)UART1_Receive_Task_STACK_SIZE,
+						(void*)NULL,
+						(UBaseType_t)UART1_Receive_Task_PRIORITY,
+						(TaskHandle_t*)&UART1_Receive_Task_Handle);
+	if(pdPASS == xReturn){}
+	else{}
+	taskEXIT_CRITICAL();
         
 #endif
 }
@@ -745,17 +765,22 @@ void UART_Init(u32 boundrate, u16 WordLength, u16 StopBits, u16 Parity, u16 Hard
   * @retval None
   */
 PUTCHAR_PROTOTYPE
-{
-  /* Place your implementation of fputc here */
-  /* e.g. write a character to the USART */
-    USART1->SR;
-  USART_SendData(USART1, (uint8_t) ch);
-
-  /* Loop until the end of transmission */
+{  
+  USART1->SR;
+  #ifdef __ARM_NONE_EABI
+  u16 i;
+  for(i=0; i<size; i++)
+  {
+	  USART_SendData(USART1, (uint8_t)pBuffer[i]);
+	  while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
+  }
+  return i;
+  #else
+  USART_SendData(USART1, (uint8_t) ch);  
   while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET)
   {}
-
   return ch;
+  #endif /* __ARM_NONE_EABI */
 }
 
 
@@ -809,7 +834,7 @@ void USART1_IRQHandler(void)
 			USART_ClearITPendingBit(USART1, USART_IT_TC);
 			UartTransmit_IRQ();
 		}
-	#endif	
+	#endif
 }
   #ifdef	UART_DMA_IT
 	void DMA2_Stream5_IRQHandler(void)

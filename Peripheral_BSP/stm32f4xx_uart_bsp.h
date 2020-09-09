@@ -20,17 +20,14 @@
 #define __STM32F4XX_UART_BSP_H
 
 #include <stdio.h>
-#include "task.h"
 #include "stm32f4xx.h"
 
-
-#ifdef __GNUC__
-  /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
-     set to 'Yes') calls __io_putchar() */
-  #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#ifdef __ARM_NONE_EABI
+  #define PUTCHAR_PROTOTYPE int _write (int fd, char *pBuffer, int size)
 #else
   #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
-#endif /* __GNUC__ */
+#endif /* __ARM_NONE_EABI */
+
 
 /*USART buffer size*/
 #define UART_RX_BUFFER_SIZE	1024
@@ -55,8 +52,8 @@
 
 
 #define Wait_BlockTime_uart_idle	0
-#define Wait_BlockTime_uart_dma   0
-#define Wait_BlockTime_uart_tc	  20
+#define Wait_BlockTime_uart_dma     0
+#define Wait_BlockTime_uart_tc	    20
 
 
 /************************************************************** 
@@ -94,23 +91,13 @@ typedef struct
 	
 	u32   send_counter;
 	u32   receive_counter;
-}UARTBufferTypeDef;
-	
+}UARTBufferTypeDef;	
 
-extern TaskHandle_t UART1_Receive_Task_Handle;
 extern UARTBufferTypeDef	RxdBufferStructure;
-
-
-extern xSemaphoreHandle Semaphore_uart_idle;
-extern xSemaphoreHandle Semaphore_uart_tc;
-extern xSemaphoreHandle Semaphore_uart_dma;
 
 extern void assert_failed(uint8_t* file, uint32_t line);
 
 /*Confuguration of low level*/
-extern void UartParam_Init(void);
-extern void UART1_Receive_Task(void);
-extern void UartRxBufferPointer_Init(void);
 extern u8 WirteToUartRxBufferFromRxBuffer0(UARTBufferTypeDef *p, u16 length);
 extern u8 WirteToUartRxBufferFromRxBuffer1(UARTBufferTypeDef *p, u16 length);
 extern void ClearRxBuffer0WirtePointer(UARTBufferTypeDef *p, u16 dmaITCounter);
@@ -122,8 +109,4 @@ extern void UartDmaStreamSend(u8 *buffer, u16 length);
 extern void USART_Config(u32 boundrate, u16 WordLength, u16 StopBits, u16 Parity, u16 HardwareFlowControl);
 extern void UART_Init(u32 boundrate, u16 WordLength, u16 StopBits, u16 Parity, u16 HardwareFlowControl);
 extern void UART_Init_115200(void);
-extern void UartRecv_IDLE_IRQ(void);
-extern void UartRecv_RXNE_IRQ(void);
-extern void UartTransmit_IRQ(void);
-extern void DmaComplete_IRQ(void);
 #endif/*__STM32F4XX_UART_BSP_H*/
