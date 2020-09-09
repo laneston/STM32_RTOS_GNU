@@ -1,6 +1,10 @@
 # STM32_RTOS_GUN
 This is a project template about RTOS in STM32F4xx. Compilated by keil_v5 and GCC Cross compilation chain.
 
+## 使用方式
+
+
+
 ## 链接文件解析
 
 文件 STM32F417IG_FLASH.ld 是用来存放芯片内存信息，笔者想向大家说明的是，该文件与 Makefile 类似，同样为脚本文件，不参与代码编译。以下笔者将对这个文件进行一个简单的解析。
