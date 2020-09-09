@@ -52,8 +52,8 @@
 
 
 #define Wait_BlockTime_uart_idle	0
-#define Wait_BlockTime_uart_dma   0
-#define Wait_BlockTime_uart_tc	  20
+#define Wait_BlockTime_uart_dma     0
+#define Wait_BlockTime_uart_tc	    20
 
 
 /************************************************************** 

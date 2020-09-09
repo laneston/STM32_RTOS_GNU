@@ -72,6 +72,21 @@ SECTIONS
 
 在 GCC 中没有 Keil_v5 的 MicroLib 库，是调用标准库实现的 printf 函数，GCC 标准库的底层是使用 _write() 函数实现输出的。
 
+```
+#define PUTCHAR_PROTOTYPE int _write (int fd, char *pBuffer, int size)
+
+PUTCHAR_PROTOTYPE
+{
+  u16 i;
+  for(i=0; i<size; i++)
+  {
+	  USART_SendData(USART1, (uint8_t)pBuffer[i]);
+	  while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
+  }
+  return i;
+}
+```
+
 ### 链接错误提示
 
 在进行编译的时候，出现这样的警告：
