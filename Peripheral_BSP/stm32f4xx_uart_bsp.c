@@ -157,29 +157,29 @@ void UartDmaStreamSend(u8 *buffer, u16 length)
   */
 static void UartRxBufferPointer_Init(void)
 {
-	heapBuffer_HeadP = stSramMalloc(&HeapStruct_eSRAM, UART_HEAP_BUFFER_SIZE);
+	heapBuffer_HeadP = stSramMalloc(&HeapStruct_SRAM1, UART_HEAP_BUFFER_SIZE);
 	if(heapBuffer_HeadP == NULL)
 	{
 #ifndef HEAP_DEBUG
 		ASSERT();
 #endif
-	}	
+	}
 	
-	RxBuffer0 = stSramMalloc(&HeapStruct_eSRAM, UART_RX_BUFFER_SIZE);
+	RxBuffer0 = stSramMalloc(&HeapStruct_SRAM1, UART_RX_BUFFER_SIZE);
 	if(RxBuffer0 == NULL)
 	{
 #ifndef HEAP_DEBUG
 		ASSERT();
 #endif
 	}
-	RxBuffer1 = stSramMalloc(&HeapStruct_eSRAM, UART_RX_BUFFER_SIZE);
+	RxBuffer1 = stSramMalloc(&HeapStruct_SRAM1, UART_RX_BUFFER_SIZE);
 	if(RxBuffer1 == NULL)
 	{
 #ifndef HEAP_DEBUG
 		ASSERT();
 #endif
 	}
-	TxBuffer = stSramMalloc(&HeapStruct_eSRAM, UART_TX_BUFFER_SIZE);
+	TxBuffer = stSramMalloc(&HeapStruct_SRAM1, UART_TX_BUFFER_SIZE);
 	if(TxBuffer == NULL)
 	{
 #ifndef HEAP_DEBUG
@@ -213,7 +213,6 @@ static void UartRxBufferPointer_Init(void)
 	RxdBufferStructure.dmaCompleteCounter = 0;	
 	RxdBufferStructure.dmaReversalValue = RESET;
 }
-
 
 
 /***********************Extract data from memory heap***************************
@@ -399,7 +398,7 @@ void ClearRxBuffer1WirtePointer(UARTBufferTypeDef *p, u16 dmaITCounter)
   * @param  p, UARTBufferTypeDef
   * @param  ExtralBuffer, A memory area for exchanging data
   * @param  length, the length of exchanging data
-  * @retval None
+  * @retval return RESET if fail, or SET if success.
   */
 u8 ReadHeapBufferToExtralBuffer(UARTBufferTypeDef *p, u8 *ExtralBuffer, u16 length)
 {
@@ -682,8 +681,9 @@ void UART_Init(u32 boundrate, u16 WordLength, u16 StopBits, u16 Parity, u16 Hard
             vSemaphoreCreateBinary(Semaphore_uart_dma);
             xSemaphoreTake( Semaphore_uart_dma, 0);
         }
-    #endif				
-				
+    #endif
+	
+	taskENTER_CRITICAL();
 	xReturn = xTaskCreate((TaskFunction_t)UART1_Receive_Task,
 						(const char*)"UART1_Receive_Task",
 						(uint32_t)UART1_Receive_Task_STACK_SIZE,
@@ -692,6 +692,7 @@ void UART_Init(u32 boundrate, u16 WordLength, u16 StopBits, u16 Parity, u16 Hard
 						(TaskHandle_t*)&UART1_Receive_Task_Handle);
 	if(pdPASS == xReturn){}
 	else{}
+	taskEXIT_CRITICAL();
         
 #endif
 }

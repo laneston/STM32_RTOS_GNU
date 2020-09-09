@@ -34,6 +34,7 @@
 #include "stm32f4xx_led_bsp.h"
 #include "stm32f4xx_heap_bsp.h"
 #include "stm32f4xx_uart_bsp.h"
+#include "stm32f4xx_fsmc_bsp.h"
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/

@@ -27,7 +27,13 @@ TaskHandle_t TEST_Task_Handle;
 void TEST_Task(void)
 {
 //	float Humi;
-//	float Temp;
+//	float Temp;	
+	
+	u16 data_len;
+	u8 *data_uart;
+	
+	printf("o\r\n");
+	data_uart = stSramMalloc(&HeapStruct_SRAM1, UART_RX_BUFFER_SIZE);
 	
 	while(1)
 	{
@@ -44,9 +50,21 @@ void TEST_Task(void)
 		******************************
 		*/
 		
+		
+		/*
 		LED1 = SET;
     Delay(500);
     LED1 = RESET;
     Delay(500);
+		*/
+				
+		if(RxdBufferStructure.readableLength)
+		{
+			data_len = RxdBufferStructure.readableLength;
+			ReadHeapBufferToExtralBuffer(&RxdBufferStructure, data_uart, data_len);
+			UartDmaStreamSend(data_uart, data_len);
+		}
+		
+		Delay(500);
 	}
 }

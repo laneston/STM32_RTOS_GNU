@@ -16,10 +16,26 @@
   */
 #include "main.h"
 
-Heap_TypeDef HeapStruct_eSRAM;
-
+Heap_TypeDef HeapStruct_SRAM1;
+//Heap_TypeDef HeapStruct_eSRAM;
+EmbeverConfig_TypeDef EmbeverStruct;
 
 TaskHandle_t Main_Task_Handle = NULL;/*Main Task Handle*/
+
+/**
+  * @brief  Peripheral parameter initialization.
+  * @param  None
+  * @retval None
+  */
+static void Device_Init(void)
+{
+	/*Initialization of serial port parameters*/
+	EmbeverStruct.uartdev.BaudRate = UART_BAUDRATE;
+	EmbeverStruct.uartdev.WordLength = UART_WORDLENGTH;
+	EmbeverStruct.uartdev.StopBits = UART_STOPBITS;
+	EmbeverStruct.uartdev.Parity = UART_PARITY;
+	EmbeverStruct.uartdev.HardwareFlowControl = UART_FLOWCONTROL;
+}
 
 /**
   * @brief  main task
@@ -29,13 +45,21 @@ TaskHandle_t Main_Task_Handle = NULL;/*Main Task Handle*/
 void Main_Task(void)
 {
 	BaseType_t xReturn = pdPASS;
+
+	Device_Init();
+	
+	SRAM_Initilization();
 	
 	/*Delay timer initialization*/
 	DelayTimer_Init(TIM2_Period);
 	
-	stSramInit(&HeapStruct_eSRAM, STM32F4XX_eSRAM_START, STM32F4XX_eSRAM_SIZE);
+	stSramInit(&HeapStruct_SRAM1, STM32F4XX_eSRAM_START, STM32F4XX_eSRAM_SIZE);
 
+	UART_Init(EmbeverStruct.uartdev.BaudRate, EmbeverStruct.uartdev.WordLength, EmbeverStruct.uartdev.StopBits, EmbeverStruct.uartdev.Parity, EmbeverStruct.uartdev.HardwareFlowControl);
+	
 	led_init();
+	
+	printf("p\r\n");
 	
 	taskENTER_CRITICAL();
 	
@@ -46,7 +70,9 @@ void Main_Task(void)
 						(UBaseType_t)TEST_Task_PRIORITY,
 						(TaskHandle_t*)&TEST_Task_Handle);
 	if(pdPASS == xReturn){}
-	else{}
+	else{
+		printf("TEST_Task ERROR\r\n");
+	}
   
 	taskEXIT_CRITICAL();
 	

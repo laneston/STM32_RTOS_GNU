@@ -53,8 +53,8 @@
 #define configCPU_CLOCK_HZ							 ( SystemCoreClock )
 #define configTICK_RATE_HZ							 ( ( TickType_t ) 1000 )
 #define configMAX_PRIORITIES						 ( 10 )
-#define configMINIMAL_STACK_SIZE				 (( unsigned short ) 64 )
-#define configTOTAL_HEAP_SIZE						 ( ( size_t ) ( 32 * 1024 ) )
+#define configMINIMAL_STACK_SIZE				     (( unsigned short ) 256 )
+#define configTOTAL_HEAP_SIZE						 (( size_t ) ( 32 * 1024 ))
 #define configMAX_TASK_NAME_LEN					 ( 16 )
 #define configUSE_TRACE_FACILITY				 1
 #define configUSE_16_BIT_TICKS					 0
