@@ -47,19 +47,17 @@ void Main_Task(void)
 	BaseType_t xReturn = pdPASS;
 
 	Device_Init();
-	
+	/*
 	SRAM_Initilization();
-	
+	*/
 	/*Delay timer initialization*/
 	DelayTimer_Init(TIM2_Period);
 	
-	stSramInit(&HeapStruct_SRAM1, STM32F4XX_eSRAM_START, STM32F4XX_eSRAM_SIZE);
+	stSramInit(&HeapStruct_SRAM1, STM32F4XX_SRAM1_START, STM32F4XX_SRAM1_SIZE);
 
 	UART_Init(EmbeverStruct.uartdev.BaudRate, EmbeverStruct.uartdev.WordLength, EmbeverStruct.uartdev.StopBits, EmbeverStruct.uartdev.Parity, EmbeverStruct.uartdev.HardwareFlowControl);
 	
 	led_init();
-	
-	printf("p\r\n");
 	
 	taskENTER_CRITICAL();
 	

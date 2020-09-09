@@ -32,7 +32,6 @@ void TEST_Task(void)
 	u16 data_len;
 	u8 *data_uart;
 	
-	printf("o\r\n");
 	data_uart = stSramMalloc(&HeapStruct_SRAM1, UART_RX_BUFFER_SIZE);
 	
 	while(1)

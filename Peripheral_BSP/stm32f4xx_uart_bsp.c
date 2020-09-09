@@ -834,7 +834,7 @@ void USART1_IRQHandler(void)
 			USART_ClearITPendingBit(USART1, USART_IT_TC);
 			UartTransmit_IRQ();
 		}
-	#endif	
+	#endif
 }
   #ifdef	UART_DMA_IT
 	void DMA2_Stream5_IRQHandler(void)
