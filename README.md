@@ -3,7 +3,7 @@ This is a project template about RTOS in STM32F4xx. Compilated by keil_v5 and GC
 
 ## 使用方式
 
-
+本工程编译方式有两种：keil_v5 或者交叉编译链 arm-none-eabi-
 
 ## 链接文件解析
 
