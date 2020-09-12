@@ -16,12 +16,11 @@
 
 值得注意的是，本工程为了使代码核心速率最大化，所以讲 STM32F4xx 的核心代码与 RTOS 放在 CCM RAM 中运行，所以链接文件也做了相关修改，详情请看 <a href = "https://blog.csdn.net/weixin_39177986/article/details/108455827">LD链接脚本解析-STM32F4xx</a>。
 
-
 ## arm-none-eabi- 编译方式
 
 本工程的运行环境： Ubuntu 20.04
 
-**所需的安装程序**
+**所需安装的程序**
 
 1. make
 2. arm-none-eabi-

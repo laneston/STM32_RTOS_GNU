@@ -5,8 +5,8 @@
   * @date    09-Aug-2020
   * @brief   USART initialization
   *          Enable GPIO, DMA interface
-	*
-	* @note    UartRxBufferPointer_Init() -> UART_Init(u32 boundrate, u16 WordLength, u16 StopBits, u16 Parity, u16 HardwareFlowControl);
+    *
+    * @note    UartRxBufferPointer_Init() -> UART_Init(u32 boundrate, u16 WordLength, u16 StopBits, u16 Parity, u16 HardwareFlowControl);
   ******************************************************************************
   * @attention
   * This project is for learning only. If it is for commercial use, please contact the author.
@@ -62,35 +62,35 @@
 */
 typedef struct
 {
-	u8 *rP;
-	u8 *wP;
-	u16	  FLen;
-	u16		ULen;
+    u8 *rP;
+    u8 *wP;
+    u16	FLen;
+    u16	ULen;
 }RxBufferTypeDef;
-	
+    
 typedef struct
 {
-	u8 *readP;
-	u8 *wirteP;
-	
-	u8 readwriteLock;
-	
-	u16		WirteResidualLength;
-	u16		ReadResidualLength;
-	u16		wirteableLength;
-	u16		readableLength;
-	u16		FreeLength;
-	u16		UsedLength;
-	
-	RxBufferTypeDef	RxBuffer0Structure;
-	RxBufferTypeDef	RxBuffer1Structure;
-	
-	u16 	uartRecv_Counter;
-	u16		dmaCompleteCounter;
-	u8		dmaReversalValue;
-	
-	u32   send_counter;
-	u32   receive_counter;
+    u8 *readP;
+    u8 *wirteP;
+    
+    u8 readwriteLock;
+    
+    u16		WirteResidualLength;
+    u16		ReadResidualLength;
+    u16		wirteableLength;
+    u16		readableLength;
+    u16		FreeLength;
+    u16		UsedLength;
+    
+    RxBufferTypeDef	RxBuffer0Structure;
+    RxBufferTypeDef	RxBuffer1Structure;
+    
+    u16 	uartRecv_Counter;
+    u16		dmaCompleteCounter;
+    u8		dmaReversalValue;
+    
+    u32   send_counter;
+    u32   receive_counter;
 }UARTBufferTypeDef;	
 
 extern UARTBufferTypeDef	RxdBufferStructure;

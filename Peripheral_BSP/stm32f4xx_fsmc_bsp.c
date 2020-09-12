@@ -161,7 +161,7 @@ static void FSMC_NAND_GPIO(void)
 static void FSMC_SRAM_Config(void)
 {
     FSMC_NORSRAMInitTypeDef  FSMC_NORSRAMInitStructure;
-  FSMC_NORSRAMTimingInitTypeDef  FSMC_NORSRAMTimingInitStructure;	
+    FSMC_NORSRAMTimingInitTypeDef  FSMC_NORSRAMTimingInitStructure;	
     
     RCC_AHB3PeriphClockCmd(RCC_AHB3Periph_FSMC,ENABLE);
     
@@ -274,10 +274,10 @@ void NAND_Initilization(void)
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
   GPIO_Init(GPIOF, &GPIO_InitStructure);
     
-    FSMC_NAND_GPIO();
-    FSMC_NAND_Config();	
+  FSMC_NAND_GPIO();
+  FSMC_NAND_Config();	
     
-    NAND_WP = RESET;
-    NAND_PT = RESET;
+  NAND_WP = RESET;
+  NAND_PT = RESET;
 }
 
