@@ -1,74 +1,42 @@
-# STM32_RTOS_GUN
-This is a project template about RTOS in STM32F4xx. Compilated by keil_v5 and GCC Cross compilation chain.
-
 ## 使用方式
 
-本工程编译方式有两种：keil_v5 或者交叉编译链 arm-none-eabi-
+本工程支持的编译方式有两种：IDE编译器 keil_v5(MDK) 与交叉编译链 arm-none-eabi-
 
-## 链接文件解析
+### keil_v5(MDK)
 
-文件 STM32F417IG_FLASH.ld 是用来存放芯片内存信息，笔者想向大家说明的是，该文件与 Makefile 类似，同样为脚本文件，不参与代码编译。以下笔者将对这个文件进行一个简单的解析。
+工程文件的目录路径在一下位置： ../MDK/STM32_RTOS_GUN.uvprojx
 
-首先我们需要普及几个简单的知识点：
+将工程打开之后就能按常规编译。
 
-1. .text   段是用来存放程序执行代码的区；
-2. .data   段通常是用来存放程序中已初始化的全局变量的一块内存区域，属于静态内存分配。
-3. .bss    段通常是指用来存放程序中未初始化的全局变量的一块内存区域。属于静态内存分配。
-4. .rodata 段通常是指用来存放程序中常量的一块内存区域。属于静态内存分配。
+需要注意的是，因为 keil_v5 封装的编译链和 arm-none-eabi- 是不一样的，所以底层的 printf 函数接口也是不一样的，这个下面会有相关介绍。
 
-下面我们就开始正式进行分析：
+### arm-none-eabi-
 
-### part 0
+同时，这个工程也能使用交叉编译链 arm-none-eabi- 进行编辑，Makefile 的详细内容就不在这里赘述了，详情请看 <a href = "https://blog.csdn.net/weixin_39177986/article/details/108125580"> 交叉编译链下的Makefile(STM32F4xx) </a>。
 
-ENTRY(Reset_Handler)
+值得注意的是，本工程为了使代码核心速率最大化，所以讲 STM32F4xx 的核心代码与 RTOS 放在 CCM RAM 中运行，所以链接文件也做了相关修改，详情请看 <a href = "https://blog.csdn.net/weixin_39177986/article/details/108455827">LD链接脚本解析-STM32F4xx</a>。
 
-第一条运行的指令被称为入口点entry point,可以使用ENTRY链接脚本命令设置entry point，参数是一个符号名。有几种方法可以设置entry point,链接器会按照如下的顺序来尝试各种方法，只要任何一种方法成功则会停止：
 
-1. the ‘-e’ entry command-line option;
-2. the ENTRY(symbol) command in a linker script;
-3. the value of the symbol start, if defined;
-4. the address of the first byte of the ‘.text’ section, if present;
-5. The address 0
+## arm-none-eabi- 编译方式
 
-### part 1
-_estack = 0x2001FFFF;
+本工程的运行环境： Ubuntu 20.04
 
-这段声明内存末尾地址。
+**所需的安装程序**
 
-### part 2
+1. make
+2. arm-none-eabi-
 
-_Min_Heap_Size = 0x200;
-_Min_Stack_Size = 0x400;
-
-这段定义了堆和栈的最小空间大小。如果定义的数值不符合内存的规格，在编译时会产生链接错误。
-
-### part 3
+**编译**
 
 ```
-MEMORY
-{
-FLASH (rx)       : ORIGIN = 0x8000000, LENGTH = 1024K
-RAM (xrw)        : ORIGIN = 0x20000000, LENGTH = 128K
-CCMRAM (rw)      : ORIGIN = 0x10000000, LENGTH = 64K
-}
+make
 ```
 
-这段定义了 FLASH RAM 和 CCMRAM 的大小信息，(xrw)表明了权限，r是读、w是写、x是执行。
-
-### part 4
+**清除目标文件**
 
 ```
-SECTIONS
-{
-    ...
-    secname:{
-        contents
-    }
-    ...
-}
+make clean
 ```
-
-它是脚本文件中最重要的元素，不可缺省。它的作用就是用来描述输出文件的布局。secname 和 contents 是必须的，其他都是可选的参数。关于链接脚本更为详细解的析内容请看 <a href = "https://github.com/laneston/Note/blob/master/LdScript_Note.md"> LdScript_Note </a>。
 
 ## 注意事项
 
