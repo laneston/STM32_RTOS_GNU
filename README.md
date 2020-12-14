@@ -1,31 +1,29 @@
-## 使用方式
+## 编译方式
 
-本工程支持的编译方式有两种：IDE编译器 keil_v5(MDK) 与交叉编译链 arm-none-eabi-
+本工程支持的编译方式有两种：IDE 编译器 keil_v5(MDK) 与交叉编译链 arm-none-eabi-
 
 ### keil_v5(MDK)
 
-工程文件的目录路径在一下位置： ../MDK/STM32_RTOS_GUN.uvprojx
+工程文件的目录路径： ../MDK/STM32_RTOS_GUN.uvprojx
 
-将工程打开之后就能按常规编译。
-
-需要注意的是，因为 keil_v5 封装的编译链和 arm-none-eabi- 是不一样的，所以底层的 printf 函数接口也是不一样的，这个下面会有相关介绍。
+值得注意的是，因为 keil_v5 封装的编译链和 arm-none-eabi- 是不一样的，所以底层的 printf 函数接口也是不一样的，这个下面会有相关介绍。
 
 ### arm-none-eabi-
 
-同时，这个工程也能使用交叉编译链 arm-none-eabi- 进行编辑，Makefile 的详细内容就不在这里赘述了，详情请看 <a href = "https://blog.csdn.net/weixin_39177986/article/details/108125580"> 交叉编译链下的Makefile(STM32F4xx) </a>。
+这个工程也能使用交叉编译链 arm-none-eabi- 进行编辑，Makefile 的详细内容不在这里赘述，详情请看 <a href = "https://blog.csdn.net/weixin_39177986/article/details/108125580"> 交叉编译链下的Makefile(STM32F4xx) </a>。
 
 值得注意的是，本工程为了使代码核心速率最大化，所以讲 STM32F4xx 的核心代码与 RTOS 放在 CCM RAM 中运行，所以链接文件也做了相关修改，详情请看 <a href = "https://blog.csdn.net/weixin_39177986/article/details/108455827">LD链接脚本解析-STM32F4xx</a>。
 
-## arm-none-eabi- 编译方式
+## arm-none-eabi- 编译环境
 
-本工程的运行环境： Ubuntu 20.04
+本工程的运行环境： Ubuntu 20.04 (我使用的是 windows 子系统)
 
 **所需安装的程序**
 
 1. make
 2. arm-none-eabi-
 
-**编译**
+**使用方式**
 
 ```
 make
