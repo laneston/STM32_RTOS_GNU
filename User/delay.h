@@ -14,18 +14,17 @@
 	* Copyright (c) 2020 Lanceli All rights reserved.
   ******************************************************************************
   */
-  
+
 #ifndef __DELAY_H
 #define __DELAY_H
 
 #include "stm32f4xx.h"
 
-
-#define TIM2_Period  42 /*APB1 max frequent is 42MHz*/
+/*APB1 max frequent is 42MHz*/
+#define TIM2_Period 42
 
 extern void DelayTimer_Init(u16 TIM_Period);
 extern void Delay_us(u32 time_us);
 extern void Delay_ms(u32 time_ms);
 
-#endif/*__DELAY_H*/
-
+#endif /*__DELAY_H*/

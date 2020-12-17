@@ -17,4 +17,7 @@
 #ifndef __INIT_LEVEL_H
 #define __INIT_LEVEL_H
 
+#include "stm32f4xx.h"
+
+extern u8 init_lowLevel(void);
 #endif /* __INIT_LEVEL_H */

@@ -18,16 +18,15 @@
 /* Includes ------------------------------------------------------------------*/
 #include "task.h"
 
-
 /* Task Stack Size-------------------------------------------------------------*/
-#define	Main_TASK_STACK_SIZE				(configMINIMAL_STACK_SIZE*2)
-#define UART1_Receive_Task_STACK_SIZE		(configMINIMAL_STACK_SIZE*2)
-#define TEST_Task_STACK_SIZE				(configMINIMAL_STACK_SIZE*2)
+#define Main_TASK_STACK_SIZE (configMINIMAL_STACK_SIZE * 2)
+#define UART1_Receive_Task_STACK_SIZE (configMINIMAL_STACK_SIZE * 2)
+#define TEST_Task_STACK_SIZE (configMINIMAL_STACK_SIZE * 2)
 
 /*Priority from low to high---------------------------------------------------*/
-#define  Main_TASK_PRIORITY					(configMAX_PRIORITIES - 9)
-#define	 TEST_Task_PRIORITY					(configMAX_PRIORITIES - 8)
-#define	 UART1_Receive_Task_PRIORITY		(configMAX_PRIORITIES - 2)
+#define Main_TASK_PRIORITY (configMAX_PRIORITIES - 9)
+#define TEST_Task_PRIORITY (configMAX_PRIORITIES - 8)
+#define UART1_Receive_Task_PRIORITY (configMAX_PRIORITIES - 2)
 
 extern TaskHandle_t Main_Task_Handle;
 

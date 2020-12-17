@@ -31,10 +31,11 @@
 
 /**
   * @brief  Main program
-  * @param  None
+  * @param  argc:
+  * @param  argv:App input parameters
   * @retval None
   */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
   BaseType_t xReturn = pdPASS;
 
@@ -52,6 +53,7 @@ int main(int argc, char* argv[])
   }
   else
   {
+    /*Enable Task scheduler*/
     vTaskStartScheduler();
   }
 

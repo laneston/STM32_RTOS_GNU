@@ -49,7 +49,8 @@ void Delay_us(u32 time_us)
   while (time_us--)
   {
     while (TIM_GetFlagStatus(TIM2, TIM_FLAG_Update) == RESET)
-      ;
+    {
+    }
     TIM_ClearFlag(TIM2, TIM_FLAG_Update);
   }
 

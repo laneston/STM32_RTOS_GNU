@@ -17,6 +17,10 @@
  #include "main.h"
 
  
+ u8 init_lowLevel(void)
+ {
+   return SET;
+ }
 
 
 

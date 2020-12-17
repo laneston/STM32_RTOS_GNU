@@ -24,19 +24,18 @@
 void led_init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
-	
+
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_LED1, ENABLE);
-	
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_LED1;
+
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_LED1;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
 	GPIO_Init(GPIO_LED, &GPIO_InitStructure);
-	
-	LED1 = SET;/*set the pin level high*/
-}
 
+	LED1 = SET; /*set the pin level high*/
+}
 
 /**
   * @brief  Led conversion polarity 
@@ -48,18 +47,17 @@ void led_init(void)
 void led_conversion(u8 led)
 {
 	u8 led_state;
-	
-	if(led == LED1)
+
+	if (led == LED1)
 	{
 		led_state = GPIO_ReadOutputDataBit(GPIO_LED, GPIO_Pin_LED1);
-		
-		if(led_state)
+
+		if (led_state)
 			LED1 = RESET;
 		else
 			LED1 = SET;
 	}
 	else
 	{
-		
 	}
 }
