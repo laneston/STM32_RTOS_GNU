@@ -14,13 +14,14 @@
   ******************************************************************************
   */
 
- #include "main.h"
+#include "main.h"
 
- 
- u8 init_lowLevel(void)
- {
-   return SET;
- }
+static u8 uart_defaultSetting(void)
+{
+  return SET;
+}
 
-
-
+u8 init_lowLevel(void)
+{
+  return SET;
+}
